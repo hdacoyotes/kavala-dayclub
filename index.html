@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+   KAVALA DAY CLUB — Landing Principal (versión simplificada) 2026
+   Archivo: kavala-landing.html
+   Sitio: kavaladayclub.com
+  ============================================================
+-->
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavala Day Club | Alberca, DJs y Mixología cerca de Guadalajara | Hacienda Coyotes</title>
+  <meta name="description" content="El day club dentro de Hacienda Coyotes, a 40 min de Guadalajara. Alberca, DJs en vivo, mixología y el mejor vibe para grupos, cumpleaños y despedidas. ¡Reserva ya!">
+  <link rel="canonical" href="https://www.kavaladayclub.com/">
+  <meta property="og:title" content="Kavala Day Club | Alberca, DJs y Mixología cerca de Guadalajara">
+  <meta property="og:description" content="Good vibes, alberca y experiencias que no se olvidan. El day club dentro de Hacienda Coyotes, a 40 min de GDL.">
+  <meta property="og:image" content="https://www.kavaladayclub.com/og-image-kavala.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kavaladayclub.com/">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNWW7LJD');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1751966532457220');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1751966532457220&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kavala-styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NightClub",
+    "name": "Kavala Day Club",
+    "description": "Day club dentro del complejo turístico Hacienda Coyotes, con alberca, DJs en vivo y mixología a 40 minutos de Guadalajara, Jalisco.",
+    "url": "https://www.kavaladayclub.com/",
+    "telephone": "+3321012205",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Km 15 Carretera Zapotlanejo - Atotonilco El Alto",
+      "addressLocality": "Zapotlanejo",
+      "addressRegion": "Jalisco",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "13:00", "closes": "20:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "15:00", "closes": "23:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "15:00", "closes": "23:00"}
+    ],
+    "priceRange": "$$-$$$"
+  }
+  </script>
+
+  <style>
+    body { margin: 0; padding: 0; }
+    /* Hero con foto de venue real como fondo */
+    .k-hero {
+      background: url('img/venue-01.jpg') center center / cover no-repeat;
+      position: relative;
+    }
+    .k-hero__overlay {
+      background: linear-gradient(160deg, rgba(44,20,9,0.82) 0%, rgba(107,58,34,0.70) 50%, rgba(44,20,9,0.78) 100%) !important;
+    }
+    .s-eventos { background-color: #2C1409; }
+
+    /* Cards de celebración — foto de fondo con overlay */
+    .k-celebrate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--k-space-3);
+      margin-top: var(--k-space-6);
+    }
+    @media (max-width: 768px) {
+      .k-celebrate-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+    }
+    .k-celebrate-card {
+      position: relative;
+      border-radius: var(--k-radius-md);
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
+      transition: var(--k-transition);
+      cursor: pointer;
+    }
+    .k-celebrate-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(44,20,9,0.4); }
+    .k-celebrate-card:hover .k-celebrate-card__bg { transform: scale(1.05); }
+    .k-celebrate-card__bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 0.5s ease;
+    }
+    .k-celebrate-card__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(44,20,9,0.92) 0%, rgba(44,20,9,0.45) 50%, rgba(44,20,9,0.15) 100%);
+    }
+    .k-celebrate-card__content {
+      position: relative; z-index: 2;
+      padding: var(--k-space-5) var(--k-space-4);
+    }
+    .k-celebrate-card__icon { font-size: 36px; display: block; margin-bottom: var(--k-space-2); color: rgba(250,247,243,0.9); }
+    .k-celebrate-card__title {
+      font-family: var(--k-font-display);
+      font-size: 22px; font-weight: 700;
+      color: #FAF7F3;
+      margin-bottom: var(--k-space-2);
+    }
+    .k-celebrate-card__text {
+      font-size: 13px; color: rgba(250,247,243,0.78); line-height: 1.6;
+      margin-bottom: var(--k-space-3);
+    }
+
+    /* Sección de agenda dinámica */
+    .k-events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--k-space-3);
+      margin-top: var(--k-space-5);
+    }
+    @media (max-width: 768px) {
+      .k-events-grid { grid-template-columns: 1fr; }
+    }
+    .k-event-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--k-radius-md);
+      padding: var(--k-space-4);
+      text-align: center;
+      transition: var(--k-transition);
+    }
+    .k-event-card:hover { background: rgba(255,255,255,0.10); }
+    .k-event-date { font-family: var(--k-font-label); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--k-gold-accent); margin-bottom: 4px; }
+    .k-event-dj { font-family: var(--k-font-display); font-size: 22px; font-weight: 700; color: var(--k-white); margin-bottom: 4px; }
+    .k-event-genre { font-size: 13px; color: rgba(253,250,246,0.6); margin-bottom: var(--k-space-3); }
+    .k-event-badge {
+      display: inline-block;
+      font-family: var(--k-font-label); font-size: 10px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px;
+      margin-bottom: var(--k-space-3);
+    }
+    .badge-hot { background: var(--k-terracotta); color: white; }
+    .badge-next { background: var(--k-brown-mid); color: white; }
+    .badge-pool { background: var(--k-pool); color: white; }
+
+    /* Loading state */
+    .k-events-loading {
+      text-align: center; padding: var(--k-space-6);
+      font-family: var(--k-font-label); font-size: 12px;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(253,250,246,0.4);
+    }
+    .k-events-empty {
+      grid-column: 1/-1; text-align: center; padding: var(--k-space-5);
+      color: rgba(253,250,246,0.5); font-size: 14px;
+    }
+
+    /* Divider decorativo */
+    .k-divider { width: 60px; height: 2px; background: var(--k-gold-accent); margin: var(--k-space-3) auto; }
+    .k-divider--left { margin-left: 0; }
+  </style>
+</head>
+<body class="kavala-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNWW7LJD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER GLOBAL HACIENDA COYOTES (viene del tema WP) -->
+  <header style="background:#2C1409;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <a href="https://www.hdacoyotes.com" style="color:#FDFAF6;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;text-decoration:none;">Hacienda Coyotes</a>
+    <nav style="display:flex;gap:20px;flex-wrap:wrap;">
+      <a href="https://www.hdacoyotes.com" style="color:rgba(253,250,246,0.75);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;">Inicio</a>
+      <a href="https://www.hdacoyotes.com/restaurante/" style="color:rgba(253,250,246,0.75);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;">Restaurante</a>
+      <a href="https://www.hdacoyotes.com/hotel/" style="color:rgba(253,250,246,0.75);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;">Hotel</a>
+      <a href="/" style="color:#C9965A;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;">Kavala</a>
+      <a href="https://www.hdacoyotes.com/contacto/" style="color:rgba(253,250,246,0.75);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S1 — HERO                                              -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="k-hero" id="inicio" aria-label="Kavala Day Club">
+    <div class="k-hero__overlay"></div>
+    <div class="k-hero__content k-animate">
+      <img src="kavala-logo.png"
+           alt="Kavala Day Club"
+           style="width: clamp(180px, 40vw, 300px); display:block; margin: 0 auto var(--k-space-4); filter: brightness(0) invert(1);"
+           loading="eager">
+      <span class="k-hero__badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> Day Club · Alberca · Música · Mixología</span>
+      <h1 class="k-hero__title">El plan que todos<br>están esperando.</h1>
+      <p class="k-hero__subtitle">
+        Good vibes, alberca y experiencias<br>
+        que no se olvidan. El day club dentro de Hacienda&nbsp;Coyotes.
+      </p>
+      <div class="k-btn-group" style="justify-content:center;margin-top:var(--k-space-5);">
+        <a href="https://wa.me/523316990962?text=Hola%2C+quiero+cotizar+un+plan+en+Kavala" class="k-btn k-btn--whatsapp" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reserva por WhatsApp
+        </a>
+        <a href="#celebra" class="k-btn k-btn--ghost">Ver planes ↓</a>
+      </div>
+      <div class="k-hero__info-bar">
+        <span class="k-hero__info-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>40 min de Guadalajara</span>
+        <span class="k-hero__info-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Vie – Dom</span>
+        <span class="k-hero__info-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>DJ en vivo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S2 — HORARIOS BAR                                      -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div class="k-schedule-bar">
+    <span class="k-schedule-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Viernes: 1pm – 8pm</span>
+    <span class="k-schedule-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sábados: 3pm – 11pm</span>
+    <span class="k-schedule-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Domingos: 3pm – 11pm</span>
+    <span class="k-schedule-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Complejo Hacienda Coyotes, Jalisco, Mexico.</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S3 — VIVE KAVALA (6 features)                          -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="k-section k-bg-cream" id="experiencia">
+    <div class="k-container k-text-center">
+      <span class="k-label">El Lugar</span>
+      <div class="k-divider"></div>
+      <h2 class="k-h2">Un día en Kavala<br>no se parece a nada.</h2>
+      <p class="k-body-lg k-animate">
+        Kavala es el day club del complejo turístico Hacienda Coyotes — que también cuenta con hotel boutique y restaurante. El único spot cerca de GDL donde la alberca, los DJs, la mixología y el mejor crew se juntan en una sola experience.
+      </p>
+      <div class="k-features-grid">
+        <article class="k-feature-card k-animate k-animate--delay-1">
+          <span class="k-feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-4 6-4 6 4 6 4 3-4 6-4"/><path d="M2 17s3-4 6-4 6 4 6 4 3-4 6-4"/><path d="M2 7s3-4 6-4 6 4 6 4 3-4 6-4"/></svg></span>
+          <h3 class="k-feature-title">Alberca social</h3>
+          <p class="k-feature-text">El corazón de Kavala. Diseñada para grupos, momentos y las mejores fotos.</p>
+        </article>
+        <article class="k-feature-card k-animate k-animate--delay-2">
+          <span class="k-feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></span>
+          <h3 class="k-feature-title">DJs cada finde</h3>
+          <p class="k-feature-text">Desde house hasta latin beats. Siempre hay música que mueve el ambiente.</p>
+        </article>
+        <article class="k-feature-card k-animate k-animate--delay-3">
+          <span class="k-feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3M16 3v3M3 11h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M9 16l1.5 1.5L15 12"/></svg></span>
+          <h3 class="k-feature-title">Mixología de autor</h3>
+          <p class="k-feature-text">Bebidas diseñadas para Kavala. Coloridas, deliciosas y listas para Instagram.</p>
+        </article>
+        <article class="k-feature-card k-animate k-animate--delay-1">
+          <span class="k-feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8M12 17v5M6.8 2h10.4l1.8 6H5L6.8 2z"/><path d="M5 8c0 3.866 3.134 7 7 7s7-3.134 7-7"/></svg></span>
+          <h3 class="k-feature-title">Mesas y botellas</h3>
+          <p class="k-feature-text">Reserva tu mesa con botella y vive Kavala en otro nivel.</p>
+        </article>
+        <article class="k-feature-card k-animate k-animate--delay-2">
+          <span class="k-feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+          <h3 class="k-feature-title">Ambiente único</h3>
+          <p class="k-feature-text">La energía y la vibra que sólo se encuentran en Kavala. Irrepetible.</p>
+        </article>
+        <article class="k-feature-card k-animate k-animate--delay-3">
+          <span class="k-feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+          <h3 class="k-feature-title">Transporte desde GDL</h3>
+          <p class="k-feature-text">Llega junto con tu grupo. Tenemos shuttle redondo desde Guadalajara.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S4 — CELEBRA EN KAVALA (cards simples → link a grupos) -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="k-section k-bg-sand" id="celebra">
+    <div class="k-container k-text-center">
+      <span class="k-label">Planes &amp; Celebraciones</span>
+      <div class="k-divider"></div>
+      <h2 class="k-h2">¿Qué estás celebrando?</h2>
+      <p class="k-body-lg k-animate" style="margin:0 auto var(--k-space-2);">
+        Cumpleaños, despedidas, grupos de amigos o simplemente el mejor plan del finde.
+        En Kavala lo hacemos especial.
+      </p>
+
+      <div class="k-celebrate-grid">
+
+        <!-- Cumpleaños -->
+        <div class="k-celebrate-card k-animate k-animate--delay-1">
+          <div class="k-celebrate-card__bg" style="background-image:url('img/people-11.jpg');"></div>
+          <div class="k-celebrate-card__overlay"></div>
+          <div class="k-celebrate-card__content">
+            <span class="k-celebrate-card__icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20M7 8v2M12 8v2M17 8v2M7 4a1 1 0 0 0-1 1v1h2V5a1 1 0 0 0-1-1zM12 4a1 1 0 0 0-1 1v1h2V5a1 1 0 0 0-1-1zM17 4a1 1 0 0 0-1 1v1h2V5a1 1 0 0 0-1-1z"/></svg></span>
+            <h3 class="k-celebrate-card__title">Cumpleaños</h3>
+            <p class="k-celebrate-card__text">Mesa especial, kit de celebración, botellas y el ambiente perfecto para el festejado/a.</p>
+            <a href="/grupos/#cumpleanos" class="k-btn k-btn--primary" style="font-size:12px;padding:12px 20px;">Ver paquetes →</a>
+          </div>
+        </div>
+
+        <!-- Despedida -->
+        <div class="k-celebrate-card k-animate k-animate--delay-2">
+          <div class="k-celebrate-card__bg" style="background-image:url('img/people-14.jpg');"></div>
+          <div class="k-celebrate-card__overlay"></div>
+          <div class="k-celebrate-card__content">
+            <span class="k-celebrate-card__icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></span>
+            <h3 class="k-celebrate-card__title">Despedida de soltera</h3>
+            <p class="k-celebrate-card__text">Alberca, cócteles, música y el setting perfecto para fotos y reels con tus amigas.</p>
+            <a href="/grupos/#despedida" class="k-btn k-btn--primary" style="font-size:12px;padding:12px 20px;">Ver paquetes →</a>
+          </div>
+        </div>
+
+        <!-- Grupos -->
+        <div class="k-celebrate-card k-animate k-animate--delay-3">
+          <div class="k-celebrate-card__bg" style="background-image:url('img/people-03.jpg');"></div>
+          <div class="k-celebrate-card__overlay"></div>
+          <div class="k-celebrate-card__content">
+            <span class="k-celebrate-card__icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3 class="k-celebrate-card__title">Grupos &amp; Eventos</h3>
+            <p class="k-celebrate-card__text">Planes Silver, Gold y Black con mesa, botellas y transporte desde Guadalajara.</p>
+            <a href="/grupos/" class="k-btn k-btn--primary" style="font-size:12px;padding:12px 20px;">Ver paquetes →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA secundario directo a WhatsApp -->
+      <div style="margin-top:var(--k-space-6);">
+        <a href="https://wa.me/523316990962?text=Hola%2C+quiero+cotizar+un+plan+en+Kavala" class="k-btn k-btn--primary" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Cotizar por WhatsApp
+        </a>
+        <p style="margin-top:var(--k-space-2);font-size:12px;color:var(--k-brown-soft);font-family:var(--k-font-label);letter-spacing:0.06em;text-transform:uppercase;">
+          Respondemos en menos de 2 horas · Lunes a domingo
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S5b — FRANJA DJS                                       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);height:180px;overflow:hidden;">
+    <div style="background:url('img/dj-05.jpg') center/cover;"></div>
+    <div style="background:url('img/dj-01.jpg') center top/cover;"></div>
+    <div style="background:url('img/dj-02.jpg') center/cover;"></div>
+    <div style="background:url('img/dj-06.jpg') center/cover;"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S5 — AGENDA (carga dinámica desde Google Sheets)       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="k-section s-eventos k-bg-dark" id="agenda">
+    <div class="k-container k-text-center">
+      <span class="k-label">Agenda</span>
+      <h2 class="k-h2 k-text-white">La música nunca para<br>en Kavala.</h2>
+      <p class="k-body-lg" style="color:rgba(253,250,246,0.78);margin:0 auto var(--k-space-5);">
+        Cada fin de semana hay un DJ diferente y una vibra distinta.
+        Revisa los próximos eventos y reserva tu lugar.
+      </p>
+
+      <!-- Contenedor donde se inyectarán las cards dinámicamente -->
+      <div id="k-events-container">
+        <div class="k-events-loading">Cargando agenda...</div>
+      </div>
+
+      <div class="k-btn-group" style="justify-content:center;margin-top:var(--k-space-5);">
+        <a href="https://www.instagram.com/kavaladayclub" class="k-btn k-btn--secondary" style="border-color:rgba(253,250,246,0.35);color:var(--k-white);" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@kavaladayclub</a>
+        <a href="https://www.hdacoyotes.com/reservaskavala/" class="k-btn k-btn--primary" target="_blank" rel="noopener">Reservar este finde</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S6 — VIDEO CINEMATIC STRIP                             -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="video" style="position:relative;overflow:hidden;height:clamp(320px,56vw,680px);background:#1A0A03;">
+    <video
+      autoplay muted loop playsinline
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;"
+      poster="img/venue-03.jpg">
+      <source src="https://www.hdacoyotes.com/wp-content/uploads/2026/04/kavala2026-Secuencia1.mp4" type="video/mp4">
+    </video>
+    <!-- Overlay gradiente sutil -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(26,10,3,0.25) 0%, rgba(26,10,3,0.15) 50%, rgba(26,10,3,0.55) 100%);"></div>
+    <!-- Texto centrado sobre el video -->
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 20px 48px;text-align:center;">
+      <p style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(250,247,243,0.65);margin:0 0 8px;">Así se vive</p>
+      <h2 style="font-family:'Canela Trial','Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:#FAF7F3;margin:0 0 24px;line-height:1.1;">The Oasis Experience.</h2>
+      <a href="https://www.hdacoyotes.com/reservaskavala/"
+         style="display:inline-flex;align-items:center;gap:8px;background:rgba(250,247,243,0.12);backdrop-filter:blur(8px);border:1px solid rgba(250,247,243,0.35);color:#FAF7F3;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:13px 28px;border-radius:50px;transition:all 0.2s;"
+         target="_blank" rel="noopener"
+         onmouseover="this.style.background='rgba(250,247,243,0.22)'"
+         onmouseout="this.style.background='rgba(250,247,243,0.12)'">
+        Reserva tu lugar →
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S7 — GALERÍA DE FOTOS                                  -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="k-section k-bg-dark" id="galeria">
+    <div class="k-container k-text-center">
+      <span class="k-label" style="color:var(--k-gold-accent);">Galería</span>
+      <div class="k-divider"></div>
+      <h2 class="k-h2 k-text-white">Así se vive Kavala.</h2>
+    </div>
+
+    <!-- Grid de fotos — mix curado: Venue · People · DJs -->
+    <div id="kavala-gallery" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:4px;margin-top:32px;max-width:1280px;margin-left:auto;margin-right:auto;padding:0 4px;">
+
+      <!-- Grande izq: venue wide shot (2x2) -->
+      <div class="kgal" data-src="img/venue-01.jpg" style="grid-column:1/3;grid-row:1/3;background:url('img/venue-01.jpg') center/cover;cursor:pointer;"></div>
+
+      <!-- People -->
+      <div class="kgal" data-src="img/people-11.jpg" style="background:url('img/people-11.jpg') center top/cover;cursor:pointer;"></div>
+      <div class="kgal" data-src="img/people-14.jpg" style="background:url('img/people-14.jpg') center/cover;cursor:pointer;"></div>
+
+      <!-- DJ booth Kavala logo -->
+      <div class="kgal" data-src="img/dj-05.jpg" style="background:url('img/dj-05.jpg') center/cover;cursor:pointer;"></div>
+      <!-- Venue -->
+      <div class="kgal" data-src="img/venue-04.jpg" style="background:url('img/venue-04.jpg') center/cover;cursor:pointer;"></div>
+
+      <!-- Grande der: people lifestyle (2x2) -->
+      <div class="kgal" data-src="img/people-01.jpg" style="grid-column:3/5;grid-row:3/5;background:url('img/people-01.jpg') center/cover;cursor:pointer;"></div>
+
+      <!-- Venue + People fila 3 -->
+      <div class="kgal" data-src="img/venue-02.jpg" style="background:url('img/venue-02.jpg') center/cover;cursor:pointer;"></div>
+      <div class="kgal" data-src="img/people-03.jpg" style="background:url('img/people-03.jpg') center top/cover;cursor:pointer;"></div>
+
+      <!-- Fila final -->
+      <div class="kgal" data-src="img/dj-01.jpg" style="background:url('img/dj-01.jpg') center/cover;cursor:pointer;"></div>
+      <div class="kgal" data-src="img/venue-05.jpg" style="background:url('img/venue-05.jpg') center/cover;cursor:pointer;"></div>
+      <div class="kgal" data-src="img/people-07.jpg" style="background:url('img/people-07.jpg') center/cover;cursor:pointer;"></div>
+      <div class="kgal" data-src="img/dj-02.jpg" style="background:url('img/dj-02.jpg') center/cover;cursor:pointer;"></div>
+    </div>
+
+    <!-- Hover overlay en cada foto -->
+    <style>
+      .kgal { position:relative; overflow:hidden; transition:transform 0.3s; }
+      .kgal::after { content:''; position:absolute; inset:0; background:rgba(44,20,9,0); transition:background 0.3s; }
+      .kgal:hover::after { background:rgba(44,20,9,0.35); }
+      .kgal:hover { transform:scale(1.01); }
+      @media(max-width:768px){
+        #kavala-gallery { grid-template-columns:repeat(2,1fr); grid-auto-rows:180px; }
+        #kavala-gallery .kgal[style*="grid-column:1/3"] { grid-column:1/3; grid-row:auto; }
+        #kavala-gallery .kgal[style*="grid-column:3/5"] { grid-column:1/3; grid-row:auto; }
+      }
+    </style>
+
+    <div class="k-container k-text-center" style="margin-top:var(--k-space-5);">
+      <a href="https://www.instagram.com/kavaladayclub" class="k-btn k-btn--secondary" style="border-color:rgba(253,250,246,0.35);color:var(--k-white);" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:7px;"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@kavaladayclub en Instagram →
+      </a>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div id="kgal-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;" onclick="this.style.display='none'">
+    <img id="kgal-lb-img" src="" alt="Kavala" style="max-width:90vw;max-height:90vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,0.6);object-fit:contain;">
+  </div>
+  <script>
+    document.querySelectorAll('.kgal').forEach(function(el){
+      el.addEventListener('click', function(){
+        var lb = document.getElementById('kgal-lightbox');
+        document.getElementById('kgal-lb-img').src = this.dataset.src;
+        lb.style.display = 'flex';
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') document.getElementById('kgal-lightbox').style.display = 'none';
+    });
+  </script>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S8 — CROSS-SELL HOTEL                                  -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section style="position:relative;overflow:hidden;min-height:clamp(340px,52vw,580px);display:flex;align-items:center;justify-content:center;">
+    <!-- Foto del hotel de fondo -->
+    <div style="position:absolute;inset:0;background:url('img/hotel-taanah.jpg') center 40%/cover no-repeat;transform:scale(1.03);"></div>
+    <!-- Overlay con gradiente direccional -->
+    <div style="position:absolute;inset:0;background:linear-gradient(105deg, rgba(20,40,20,0.82) 0%, rgba(20,40,20,0.58) 55%, rgba(20,40,20,0.30) 100%);"></div>
+    <!-- Contenido -->
+    <div style="position:relative;z-index:2;max-width:640px;padding:60px 32px;text-align:left;">
+      <span style="display:inline-block;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(200,230,200,0.75);margin-bottom:14px;">También en Hacienda Coyotes</span>
+      <h2 style="font-family:'Canela Trial','Playfair Display',Georgia,serif;font-size:clamp(28px,4.5vw,50px);font-weight:700;color:#FAF7F3;margin:0 0 16px;line-height:1.1;">Quédate a dormir<br>bajo las estrellas.</h2>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.6vw,17px);color:rgba(250,247,243,0.82);line-height:1.7;margin:0 0 32px;max-width:480px;">Glamping boutique en medio de la naturaleza. El complemento perfecto para tu experiencia en Kavala — llega el viernes, quédate el fin de semana.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <a href="https://us2.cloudbeds.com/reservation/H9bd0L"
+           target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:9px;background:#FAF7F3;color:#2C1409;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:15px 32px;border-radius:50px;transition:all 0.2s;"
+           onmouseover="this.style.background='#fff';this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.background='#FAF7F3';this.style.transform='translateY(0)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg>
+          Ver disponibilidad
+        </a>
+        <a href="https://www.hdacoyotes.com/hotel/"
+           target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:7px;color:rgba(250,247,243,0.8);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(250,247,243,0.35);padding-bottom:2px;transition:all 0.2s;"
+           onmouseover="this.style.color='#FAF7F3';this.style.borderColor='rgba(250,247,243,0.8)'"
+           onmouseout="this.style.color='rgba(250,247,243,0.8)';this.style.borderColor='rgba(250,247,243,0.35)'">
+          Conocer el hotel →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S7 — FAQs (versión reducida — 6 preguntas clave)       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="k-section k-bg-cream" id="faq">
+    <div class="k-container">
+      <div class="k-text-center">
+        <span class="k-label">Preguntas Frecuentes</span>
+        <div class="k-divider"></div>
+        <h2 class="k-h2">Lo que más nos preguntan.</h2>
+        <p class="k-body-lg" style="margin:0 auto var(--k-space-6);">Resolvemos tus dudas para que solo te quede planear el mejor día.</p>
+      </div>
+      <div class="k-faq-list" role="list">
+        <div class="k-faq-item open" role="listitem">
+          <button class="k-faq-question" aria-expanded="true">¿Kavala es solo para adultos?</button>
+          <div class="k-faq-answer">Sí. Kavala es exclusivo para mayores de 18 años. Se solicita identificación oficial en la entrada.</div>
+        </div>
+        <div class="k-faq-item" role="listitem">
+          <button class="k-faq-question" aria-expanded="false">¿Qué días y horarios abre?</button>
+          <div class="k-faq-answer"><strong>Viernes:</strong> 1:00 PM – 8:00 PM · <strong>Sábados y Domingos:</strong> 3:00 PM – 11:00 PM</div>
+        </div>
+        <div class="k-faq-item" role="listitem">
+          <button class="k-faq-question" aria-expanded="false">¿Tienen paquetes para grupos, cumpleaños y despedidas?</button>
+          <div class="k-faq-answer">Sí. Contamos con planes Silver, Gold y Black con mesa reservada, botellas y kits de celebración sin costo adicional. <a href="/grupos/" style="color:var(--k-terracotta);font-weight:600;">Ver todos los paquetes →</a></div>
+        </div>
+        <div class="k-faq-item" role="listitem">
+          <button class="k-faq-question" aria-expanded="false">¿Tienen transporte desde Guadalajara?</button>
+          <div class="k-faq-answer">Sí. Shuttle Mediano (8–14 personas) $4,000 MXN · Shuttle Grande (15–20 personas) $5,000 MXN. Incluye agua y Welcome Drink. <a href="/grupos/#transporte" style="color:var(--k-terracotta);font-weight:600;">Ver detalles →</a></div>
+        </div>
+        <div class="k-faq-item" role="listitem">
+          <button class="k-faq-question" aria-expanded="false">¿Hay DJ todos los fines de semana?</button>
+          <div class="k-faq-answer">Sí. DJ en vivo sábados y domingos. Síguenos en Instagram para ver el lineup semanal.</div>
+        </div>
+        <div class="k-faq-item" role="listitem">
+          <button class="k-faq-question" aria-expanded="false">¿Cómo reservo o cotizo?</button>
+          <div class="k-faq-answer">Escríbenos por WhatsApp al <strong>33 1699 0962</strong> con tu fecha, número de personas y tipo de evento. Respondemos en menos de 2 horas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- S8 — CTA FINAL                                         -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section style="position:relative;min-height:400px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#3D1F0D,#C4613A);"></div>
+    <div style="position:absolute;inset:0;background:rgba(44,20,9,0.65);"></div>
+    <div style="position:relative;z-index:2;padding:var(--k-space-8) var(--k-space-4);">
+      <span class="k-label">¿Listo?</span>
+      <h2 class="k-h2 k-text-white" style="margin-bottom:var(--k-space-3);">Tu próximo plan<br>empieza aquí.</h2>
+      <p class="k-body-lg" style="color:rgba(253,250,246,0.82);margin:0 auto var(--k-space-5);max-width:480px;">Solo escríbenos y armamos tu experiencia.</p>
+      <div class="k-btn-group" style="justify-content:center;">
+        <a href="https://wa.me/523316990962?text=Hola%2C+quiero+cotizar+un+plan+en+Kavala" class="k-btn k-btn--whatsapp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:7px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Cotizar por WhatsApp</a>
+        <a href="tel:+3321012205" class="k-btn k-btn--ghost"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+33 2101 2205</a>
+      </div>
+      <div style="margin-top:var(--k-space-3);">
+        <a href="https://www.hdacoyotes.com/menukavala/" class="k-btn k-btn--ghost" target="_blank" rel="noopener" style="font-size:13px;padding:12px 28px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:7px;"><path d="M3 3h18v4H3zM3 10h18M3 14h18M3 18h12"/></svg>Ver Menú</a>
+      </div>
+      <p style="margin-top:var(--k-space-3);font-size:12px;color:rgba(253,250,246,0.45);font-family:var(--k-font-label);letter-spacing:0.08em;text-transform:uppercase;">Respondemos en menos de 2 horas · Lunes a domingo</p>
+    </div>
+  </section>
+
+  <!-- FOOTER GLOBAL (viene del tema WP) -->
+  <footer style="background:#2C1409;padding:28px 32px;text-align:center;color:rgba(253,250,246,0.55);font-family:'Inter',sans-serif;font-size:13px;">
+    <p>© 2026 Hacienda Coyotes · Kavala Day Club · Todos los derechos reservados</p>
+    <p style="margin-top:8px;">Complejo Hacienda Coyotes, Zapotlanejo, Jalisco · <a href="tel:+3321012205" style="color:#C9965A;">+33 2101 2205</a></p>
+  </footer>
+
+  <!-- WHATSAPP STICKY -->
+  <a href="https://wa.me/523316990962?text=Hola%2C+quiero+cotizar+un+plan+en+Kavala" class="k-wa-sticky" target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
+    <svg class="k-wa-sticky__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="k-hidden-mobile">Cotizar por WhatsApp</span>
+    <span class="k-hidden-desktop">💬 Cotizar por WhatsApp</span>
+  </a>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- JAVASCRIPT                                             -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <script>
+  // ─── 1. Animaciones fade-up
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.k-animate').forEach(el => observer.observe(el));
+
+  // ─── 2. FAQ Accordion
+  document.querySelectorAll('.k-faq-item').forEach(item => {
+    item.querySelector('.k-faq-question').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.k-faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.k-faq-question').setAttribute('aria-expanded','false'); });
+      if (!isOpen) { item.classList.add('open'); item.querySelector('.k-faq-question').setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  // ─── 3. Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); });
+  });
+
+  // ─── 4. Agenda dinámica desde Google Sheets
+  // ============================================================
+  //  INSTRUCCIONES PARA ACTIVAR:
+  //  1. Crea una hoja de Google con estas columnas (fila 1 = encabezados):
+  //     A: Fecha | B: DJ | C: Genero | D: Horario | E: Badge | F: Activo
+  //  2. Valores de Badge: "ESTE FIN" | "PRÓXIMO" | "ESPECIAL"
+  //  3. En Activo: escribe TRUE para mostrar, FALSE para ocultar
+  //  4. En el menú Archivo > Compartir > Publicar en la web
+  //     → Elige la hoja, formato CSV → Copiar enlace
+  //  5. Pega el enlace en SHEET_CSV_URL abajo (reemplaza la URL de ejemplo)
+  // ============================================================
+  const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQmamoxIz52nN7VHT4ABvzFkF0NF2swOSttUOSxPB74rMk8O5QOZhnzq8lPru6nUK05qvr9sl-D8L4K/pub?gid=1359877499&single=true&output=csv';
+  // Ejemplo real:
+  // const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-.../pub?output=csv';
+
+  const container = document.getElementById('k-events-container');
+
+  function getBadgeClass(badge) {
+    const b = (badge || '').toUpperCase();
+    if (b.includes('FIN') || b.includes('HOT')) return 'badge-hot';
+    if (b.includes('ESPECIAL')) return 'badge-pool';
+    return 'badge-next';
+  }
+
+  function renderEvents(events) {
+    if (!events.length) {
+      container.innerHTML = '<div class="k-events-empty">Los eventos se anuncian cada semana.<br>Síguenos en Instagram para no perderte nada.</div>';
+      return;
+    }
+    container.innerHTML = '<div class="k-events-grid">' + events.map(ev => `
+      <article class="k-event-card">
+        <p class="k-event-date">${ev.fecha}</p>
+        <h3 class="k-event-dj">${ev.dj}</h3>
+        <p class="k-event-genre">${ev.genero}</p>
+        ${ev.badge ? `<span class="k-event-badge ${getBadgeClass(ev.badge)}">${ev.badge}</span>` : ''}
+        <br>
+        <a href="https://www.hdacoyotes.com/reservaskavala/"
+           class="k-btn k-btn--ghost" style="font-size:12px;padding:10px 20px;width:100%;margin-top:8px;"
+           target="_blank" rel="noopener">Reservar</a>
+      </article>`).join('') + '</div>';
+  }
+
+  function parseCSV(text) {
+    const rows = text.trim().split('\n').slice(1); // quitar encabezados
+    return rows.map(row => {
+      // Manejo básico de CSV (celdas sin comas internas)
+      const cols = row.split(',').map(c => c.trim().replace(/^"|"$/g, ''));
+      return { fecha: cols[0], dj: cols[1], genero: cols[2], horario: cols[3], badge: cols[4], activo: cols[5] };
+    }).filter(ev => ev.activo && ev.activo.toUpperCase() === 'TRUE' && ev.dj);
+  }
+
+  async function loadEvents() {
+    // Si no se ha configurado la URL real, mostrar eventos de ejemplo
+    if (!SHEET_CSV_URL || SHEET_CSV_URL === 'TU_URL_CSV_DE_GOOGLE_SHEETS_AQUI') {
+      renderEvents([
+        { fecha: 'Sábado 24 Mayo 2026', dj: 'DJ Próximamente', genero: 'House · Latin Beats', badge: 'ESTE FIN' },
+        { fecha: 'Domingo 25 Mayo 2026', dj: 'DJ Próximamente', genero: 'Reggaeton · Comercial', badge: 'ESTE FIN' },
+        { fecha: 'Sábado 31 Mayo 2026', dj: 'Por confirmar', genero: 'Electronic · House', badge: 'PRÓXIMO' }
+      ]);
+      return;
+    }
+    try {
+      const res = await fetch(SHEET_CSV_URL);
+      if (!res.ok) throw new Error('Error al cargar');
+      const text = await res.text();
+      renderEvents(parseCSV(text));
+    } catch {
+      // Fallback si falla la carga
+      renderEvents([]);
+    }
+  }
+
+  loadEvents();
+  </script>
+
+</body>
+</html>

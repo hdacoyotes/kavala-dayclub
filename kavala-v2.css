@@ -1,0 +1,365 @@
+/*
+ * KAVALA DAY CLUB — Estilos v2 · Ruta C+A · Terracotta Dominante
+ * Paleta: #C96A4A · #E07B56 · #4DBFC9 · #F9F5F0 · #E8B87A · #2C1409
+ */
+
+/* ── 1. VARIABLES ───────────────────────────────── */
+:root {
+  --terra:   #C96A4A;
+  --terra-d: #A8563B;
+  --terra-l: #E07B56;
+  --pool:    #4DBFC9;
+  --gold:    #E8B87A;
+  --cream:   #F9F5F0;
+  --dark:    #2C1409;
+  --mid:     #5C3317;
+  --sand:    #E8D5B0;
+  --white:   #FFFFFF;
+  --ff-s:    'Cormorant Garamond', Georgia, serif;
+  --ff-n:    'Montserrat', system-ui, sans-serif;
+  --trans:   all .25s ease;
+}
+
+/* ── 2. RESET + BASE ────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--ff-n); background: var(--white); color: var(--dark); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ── 3. TYPOGRAPHY ──────────────────────────────── */
+.kv-label {
+  font-family: var(--ff-n); font-size: 10px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--terra);
+}
+.kv-label--light { color: rgba(255,255,255,.5); }
+.kv-label--gold  { color: var(--gold); }
+.kv-h1 {
+  font-family: var(--ff-s); font-size: clamp(40px,7vw,96px);
+  font-weight: 400; font-style: italic; line-height: 1.0; color: var(--white);
+}
+.kv-h2 {
+  font-family: var(--ff-s); font-size: clamp(28px,4vw,56px);
+  font-weight: 400; line-height: 1.15;
+}
+.kv-h2--light { color: var(--white); }
+.kv-h3 {
+  font-family: var(--ff-s); font-size: clamp(20px,2.5vw,30px);
+  font-weight: 600; line-height: 1.2;
+}
+.kv-body { font-size: 15px; line-height: 1.8; color: var(--mid); }
+.kv-body--light { color: rgba(255,255,255,.72); }
+.kv-line { width: 36px; height: 2px; background: var(--terra); margin: 16px 0; }
+.kv-line--c { margin: 16px auto; }
+
+/* ── 4. LAYOUT ──────────────────────────────────── */
+.kv-wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.kv-wrap--sm { max-width: 760px; }
+@media(max-width:768px) { .kv-wrap { padding: 0 20px; } }
+.kv-section { padding: 80px 0; }
+.kv-section--sm { padding: 60px 0; }
+.kv-bg-dark  { background: var(--dark); }
+.kv-bg-cream { background: var(--cream); }
+.kv-bg-white { background: var(--white); }
+.kv-bg-terra { background: var(--terra); }
+.kv-tc { text-align: center; }
+
+/* ── 5. BUTTONS ─────────────────────────────────── */
+.kv-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--ff-n); font-size: 11px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase;
+  padding: 14px 28px; cursor: pointer; border: none;
+  transition: var(--trans);
+}
+.kv-btn--terra { background: var(--terra); color: var(--white); }
+.kv-btn--terra:hover { background: var(--terra-d); transform: translateY(-2px); }
+.kv-btn--ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.4); }
+.kv-btn--ghost:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+.kv-btn--ghost-dark { background: transparent; color: var(--dark); border: 1.5px solid rgba(44,20,9,.3); }
+.kv-btn--ghost-dark:hover { border-color: var(--terra); color: var(--terra); }
+.kv-btn--wa { background: #25D366; color: var(--white); }
+.kv-btn--wa:hover { background: #20bf5b; transform: translateY(-2px); }
+.kv-btn--pool { background: var(--pool); color: var(--white); }
+.kv-btn--gold { background: var(--gold); color: var(--dark); }
+.kv-btn-group { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.kv-btn-group--c { justify-content: center; }
+
+/* ── 6. NAV ─────────────────────────────────────── */
+.kv-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  height: 68px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; transition: var(--trans);
+}
+.kv-nav--scrolled { background: var(--dark); box-shadow: 0 2px 20px rgba(0,0,0,.3); }
+.kv-nav__logo { height: 22px; filter: brightness(0) invert(1); opacity: .9; }
+.kv-nav__links { display: flex; gap: 2px; }
+.kv-nav__link {
+  font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(255,255,255,.6); padding: 8px 14px; transition: var(--trans);
+}
+.kv-nav__link:hover { color: var(--white); }
+.kv-nav__link--cta { background: var(--terra); color: var(--white) !important; }
+.kv-nav__link--cta:hover { background: var(--terra-d); }
+.kv-nav__burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.kv-nav__burger span { display: block; width: 22px; height: 2px; background: var(--white); }
+@media(max-width:900px) {
+  .kv-nav__links { display: none; }
+  .kv-nav__burger { display: flex; }
+  .kv-nav { padding: 0 20px; }
+}
+
+/* ── 7. HERO ─────────────────────────────────────── */
+.kv-hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: flex-end; overflow: hidden;
+}
+.kv-hero__bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transform: scale(1.04);
+  transition: transform 8s ease;
+}
+.kv-hero.loaded .kv-hero__bg { transform: scale(1); }
+.kv-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(44,20,9,.75) 0%, rgba(44,20,9,.45) 40%, rgba(44,20,9,.85) 100%);
+}
+.kv-hero__content {
+  position: relative; z-index: 2;
+  padding: 0 60px 70px; max-width: 820px;
+}
+.kv-hero__badge {
+  display: inline-block; background: var(--terra); color: var(--white);
+  font-family: var(--ff-n); font-size: 9px; font-weight: 700;
+  letter-spacing: .22em; text-transform: uppercase;
+  padding: 6px 14px; margin-bottom: 20px;
+}
+.kv-hero__sub {
+  font-family: var(--ff-n); font-size: 14px; font-weight: 400;
+  color: rgba(255,255,255,.72); letter-spacing: .04em;
+  margin: 16px 0 32px; max-width: 520px; line-height: 1.7;
+}
+.kv-hero__info {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  margin-top: 48px; padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+.kv-hero__info-item {
+  font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(255,255,255,.55);
+}
+.kv-hero__info-item strong { color: var(--white); display: block; font-size: 13px; }
+@media(max-width:768px) {
+  .kv-hero__content { padding: 0 20px 80px; }
+  .kv-hero__info { gap: 16px; }
+}
+
+/* ── 8. SCHEDULE BAR ─────────────────────────────── */
+.kv-schedbar {
+  background: var(--terra); padding: 14px 40px;
+  display: flex; justify-content: center; gap: 0;
+  flex-wrap: wrap; overflow-x: auto;
+}
+.kv-schedbar__item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: rgba(255,255,255,.85);
+  padding: 4px 20px; white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+.kv-schedbar__item:last-child { border-right: none; }
+.kv-schedbar__item strong { color: var(--white); }
+@media(max-width:768px) { .kv-schedbar { padding: 12px 16px; gap: 0; justify-content: flex-start; } }
+
+/* ── 9. FEATURE GRID ─────────────────────────────── */
+.kv-features { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+@media(max-width:900px) { .kv-features { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:560px) { .kv-features { grid-template-columns: 1fr; } }
+.kv-feature {
+  background: var(--white); overflow: hidden;
+  transition: var(--trans); cursor: default;
+}
+.kv-feature:hover .kv-feature__img { transform: scale(1.04); }
+.kv-feature__img {
+  height: 220px; background-size: cover; background-position: center;
+  transition: transform .5s ease;
+}
+.kv-feature__body { padding: 24px; }
+.kv-feature__title { font-family: var(--ff-s); font-size: 20px; font-weight: 600; color: var(--dark); margin-bottom: 8px; }
+.kv-feature__text { font-size: 13px; color: var(--mid); line-height: 1.7; }
+
+/* ── 10. CELEBRATE CARDS ─────────────────────────── */
+.kv-celebrate-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+@media(max-width:768px) { .kv-celebrate-grid { grid-template-columns: 1fr; } }
+.kv-celebrate {
+  position: relative; min-height: 480px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  overflow: hidden; cursor: pointer;
+}
+.kv-celebrate__bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform .5s ease;
+}
+.kv-celebrate:hover .kv-celebrate__bg { transform: scale(1.05); }
+.kv-celebrate__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(44,20,9,.92) 0%, rgba(44,20,9,.4) 55%, rgba(44,20,9,.1) 100%);
+}
+.kv-celebrate__body { position: relative; z-index: 2; padding: 32px 28px; }
+.kv-celebrate__title { font-family: var(--ff-s); font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.kv-celebrate__text { font-size: 13px; color: rgba(255,255,255,.7); line-height: 1.65; margin-bottom: 20px; }
+
+/* ── 11. EVENT CARDS (AGENDA) ────────────────────── */
+.kv-events-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 40px; }
+@media(max-width:768px) { .kv-events-grid { grid-template-columns: 1fr; } }
+.kv-event {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
+  padding: 28px 24px; text-align: center; transition: var(--trans);
+}
+.kv-event:hover { background: rgba(255,255,255,.09); }
+.kv-event__date { font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.kv-event__dj { font-family: var(--ff-s); font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.kv-event__genre { font-size: 12px; color: rgba(255,255,255,.5); margin-bottom: 16px; }
+.kv-event__badge {
+  display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; padding: 3px 10px; margin-bottom: 16px;
+}
+.badge-hot { background: var(--terra); color: var(--white); }
+.badge-pool { background: var(--pool); color: var(--white); }
+.badge-next { background: rgba(255,255,255,.1); color: rgba(255,255,255,.6); }
+
+/* ── 12. PACKAGE CARDS ───────────────────────────── */
+.kv-packages { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; align-items: start; }
+@media(max-width:768px) { .kv-packages { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
+.kv-pkg {
+  position: relative; overflow: hidden;
+  border: 1px solid rgba(44,20,9,.1);
+}
+.kv-pkg--featured { border: 2px solid var(--terra); transform: scale(1.03); box-shadow: 0 20px 60px rgba(201,106,74,.2); }
+.kv-pkg__badge {
+  position: absolute; top: 0; right: 20px;
+  background: var(--terra); color: var(--white);
+  font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 5px 12px;
+}
+.kv-pkg__head { padding: 28px 24px 20px; background: var(--dark); text-align: center; }
+.kv-pkg--featured .kv-pkg__head { background: var(--terra); }
+.kv-pkg__tier { font-size: 9px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 8px; }
+.kv-pkg__name { font-family: var(--ff-s); font-size: 32px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.kv-pkg__tagline { font-size: 12px; color: rgba(255,255,255,.55); }
+.kv-pkg__price { font-family: var(--ff-s); font-size: 42px; font-weight: 700; color: var(--white); }
+.kv-pkg__price sup { font-size: 20px; vertical-align: super; }
+.kv-pkg__price-note { font-size: 11px; color: rgba(255,255,255,.45); margin-top: 2px; }
+.kv-pkg__body { padding: 24px; background: var(--cream); }
+.kv-pkg__list { list-style: none; margin-bottom: 20px; }
+.kv-pkg__list li {
+  font-size: 13px; color: var(--mid); padding: 8px 0;
+  border-bottom: 1px solid rgba(44,20,9,.07);
+  display: flex; gap: 10px; align-items: flex-start; line-height: 1.5;
+}
+.kv-pkg__list li::before { content: '✓'; color: var(--terra); font-weight: 700; flex-shrink: 0; }
+.kv-pkg__list li:last-child { border-bottom: none; }
+
+/* ── 13. TRANSPORT CARDS ─────────────────────────── */
+.kv-transport-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+@media(max-width:768px) { .kv-transport-grid { grid-template-columns: 1fr; } }
+.kv-transport {
+  background: var(--white); border: 1px solid rgba(44,20,9,.1);
+  padding: 36px 32px; position: relative;
+}
+.kv-transport__price {
+  font-family: var(--ff-s); font-size: 48px; font-weight: 700;
+  color: var(--terra); line-height: 1;
+}
+.kv-transport__name { font-family: var(--ff-s); font-size: 22px; color: var(--dark); margin: 8px 0 4px; }
+.kv-transport__capacity { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-bottom: 20px; }
+.kv-transport__list { list-style: none; }
+.kv-transport__list li { font-size: 13px; color: var(--mid); padding: 6px 0; border-bottom: 1px solid rgba(44,20,9,.06); display: flex; gap: 8px; }
+.kv-transport__list li::before { content: '—'; color: var(--terra); }
+
+/* ── 14. GALLERY ─────────────────────────────────── */
+.kv-gallery { display: grid; grid-template-columns: repeat(4,1fr); grid-auto-rows: 240px; gap: 3px; }
+@media(max-width:768px) { .kv-gallery { grid-template-columns: repeat(2,1fr); grid-auto-rows: 180px; } }
+.kv-gal {
+  background-size: cover; background-position: center;
+  cursor: pointer; overflow: hidden; position: relative;
+  transition: var(--trans);
+}
+.kv-gal::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(201,106,74,0); transition: var(--trans);
+}
+.kv-gal:hover::after { background: rgba(201,106,74,.25); }
+.kv-gal--2x2 { grid-column: span 2; grid-row: span 2; }
+.kv-gal--2x1 { grid-column: span 2; }
+
+/* ── 15. FAQ ─────────────────────────────────────── */
+.kv-faq-item { border-bottom: 1px solid rgba(44,20,9,.1); }
+.kv-faq-q {
+  width: 100%; text-align: left; background: none; border: none;
+  font-family: var(--ff-n); font-size: 14px; font-weight: 600;
+  color: var(--dark); padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; transition: var(--trans); gap: 16px;
+}
+.kv-faq-q:hover { color: var(--terra); }
+.kv-faq-q__icon {
+  width: 28px; height: 28px; flex-shrink: 0;
+  border: 1.5px solid var(--terra); color: var(--terra);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; transition: var(--trans);
+}
+.kv-faq-item.open .kv-faq-q__icon { transform: rotate(45deg); background: var(--terra); color: var(--white); }
+.kv-faq-a {
+  max-height: 0; overflow: hidden; transition: max-height .35s ease;
+  font-size: 14px; color: var(--mid); line-height: 1.8;
+}
+.kv-faq-item.open .kv-faq-a { max-height: 300px; padding-bottom: 20px; }
+
+/* ── 16. STICKY ELEMENTS ─────────────────────────── */
+.kv-wa-sticky {
+  position: fixed; bottom: 88px; right: 24px; z-index: 800;
+  background: #25D366; color: var(--white); border-radius: 50px;
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 22px; font-size: 11px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(37,211,102,.35);
+  transition: var(--trans);
+}
+.kv-wa-sticky:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,211,102,.45); }
+.kv-wa-sticky svg { width: 20px; height: 20px; flex-shrink: 0; }
+@media(max-width:768px) {
+  .kv-wa-sticky { bottom: 74px; right: 16px; padding: 13px 16px; }
+  .kv-wa-sticky span { display: none; }
+}
+.kv-mobile-bar {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 850;
+  background: var(--dark); border-top: 2px solid var(--terra);
+  padding: 10px 16px; gap: 8px;
+}
+@media(max-width:768px) { .kv-mobile-bar { display: flex; } }
+.kv-mobile-bar a { flex: 1; text-align: center; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 11px 0; }
+
+/* ── 17. ANIMATIONS ──────────────────────────────── */
+.kv-fade { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+.kv-fade.in { opacity: 1; transform: none; }
+.kv-fade--d1 { transition-delay: .1s; }
+.kv-fade--d2 { transition-delay: .2s; }
+.kv-fade--d3 { transition-delay: .3s; }
+
+/* ── 18. MAP ──────────────────────────────────────── */
+.kv-map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+@media(max-width:768px) { .kv-map-grid { grid-template-columns: 1fr; } }
+.kv-map-frame { height: 420px; width: 100%; border: none; filter: saturate(.8); }
+.kv-map-info { padding: 48px 40px; background: var(--dark); display: flex; flex-direction: column; justify-content: center; }
+
+/* ── 19. LIGHTBOX ─────────────────────────────────── */
+.kv-lb {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.94); align-items: center; justify-content: center; cursor: zoom-out;
+}
+.kv-lb.open { display: flex; }
+.kv-lb img { max-width: 92vw; max-height: 90vh; object-fit: contain; }

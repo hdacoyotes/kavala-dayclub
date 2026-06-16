@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Packages | Kavala Day Club — Silver, Gold & Black</title>
+<meta name="description" content="Arma tu experiencia grupal en Kavala. Paquetes Silver, Gold y Black con botellas, transporte redondo desde GDL y kits de celebración para cumpleaños y despedidas.">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TNWW7LJD');</script>
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1751966532457220');fbq('track','PageView');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terra:#C96A4A;--terra-d:#A8563B;--pool:#4DBFC9;--gold:#E8B87A;
+  --cream:#F9F5F0;--dark:#2C1409;--mid:#5C3317;--white:#FFFFFF;
+  --ff-s:'Cormorant Garamond',Georgia,serif;--ff-n:'Montserrat',system-ui,sans-serif;
+  --trans:all .25s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-n);background:var(--white);color:var(--dark);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+/* TOPBAR */
+.g-topbar{background:#1a0a04;padding:7px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;border-bottom:1px solid rgba(255,255,255,.07);}
+.g-topbar a{font-family:var(--ff-n);font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;}
+.g-topbar nav{display:flex;gap:0;}
+.g-topbar nav a{font-size:9px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:4px 14px;border-right:1px solid rgba(255,255,255,.08);}
+.g-topbar nav a:last-child{border-right:none;}
+
+/* NAV */
+.g-nav{position:fixed;top:33px;left:0;right:0;z-index:900;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:var(--trans);}
+.g-nav--scrolled{background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.3);top:0;}
+.g-nav__logo{height:20px;filter:brightness(0) invert(1);opacity:.9;}
+.g-nav__links{display:flex;gap:2px;}
+.g-nav__link{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);padding:8px 14px;transition:var(--trans);}
+.g-nav__link:hover{color:var(--white);}
+.g-nav__link--cta{background:var(--terra);color:var(--white)!important;}
+.g-nav__link--cta:hover{background:var(--terra-d);}
+.g-nav__back{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:var(--trans);}
+.g-nav__back:hover{color:var(--white);}
+
+/* HERO */
+.g-hero{position:relative;min-height:70vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--dark);}
+.g-hero__bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.45;}
+.g-hero__overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(44,20,9,.3) 0%,rgba(44,20,9,.9) 100%);}
+.g-hero__content{position:relative;z-index:2;padding:0 60px 64px;max-width:900px;}
+@media(max-width:768px){.g-hero__content{padding:0 20px 80px;}}
+
+/* STEPS NAV */
+.g-steps{background:var(--terra);padding:0;display:flex;overflow-x:auto;}
+.g-step{flex:1;min-width:140px;padding:18px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.15);cursor:pointer;transition:var(--trans);display:flex;flex-direction:column;align-items:center;gap:8px;}
+.g-step:last-child{border-right:none;}
+.g-step:hover{background:rgba(255,255,255,.1);}
+.g-step__num{width:28px;height:28px;border:1.5px solid rgba(255,255,255,.4);color:rgba(255,255,255,.6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;}
+.g-step__label{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+
+/* WRAP / SECTION */
+.g-wrap{max-width:1200px;margin:0 auto;padding:0 44px;}
+.g-wrap--sm{max-width:800px;}
+@media(max-width:768px){.g-wrap{padding:0 20px;}}
+.g-section{padding:80px 0;}
+.g-bg-dark{background:var(--dark);}
+.g-bg-cream{background:var(--cream);}
+.g-bg-white{background:var(--white);}
+.g-tc{text-align:center;}
+.g-label{font-family:var(--ff-n);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);}
+.g-label--gold{color:var(--gold);}
+.g-label--light{color:rgba(255,255,255,.45);}
+.g-line{width:36px;height:2px;background:var(--terra);margin:14px 0;}
+.g-line--c{margin:14px auto;}
+.g-line--gold{background:var(--gold);}
+.g-h1{font-family:var(--ff-s);font-size:clamp(40px,6vw,80px);font-weight:400;font-style:italic;color:var(--white);line-height:1.0;}
+.g-h2{font-family:var(--ff-s);font-size:clamp(28px,4vw,52px);font-weight:400;line-height:1.15;}
+.g-h2--light{color:var(--white);}
+.g-body{font-size:15px;line-height:1.8;color:var(--mid);}
+.g-body--light{color:rgba(255,255,255,.65);}
+
+/* BTN */
+.g-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-n);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;cursor:pointer;border:none;transition:var(--trans);}
+.g-btn--terra{background:var(--terra);color:var(--white);}
+.g-btn--terra:hover{background:var(--terra-d);transform:translateY(-2px);}
+.g-btn--wa{background:#25D366;color:var(--white);}
+.g-btn--wa:hover{background:#20bf5b;transform:translateY(-2px);}
+.g-btn--ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35);}
+.g-btn--ghost:hover{border-color:var(--white);background:rgba(255,255,255,.07);}
+.g-btn--ghost-dark{background:transparent;color:var(--dark);border:1.5px solid rgba(44,20,9,.25);}
+.g-btn--ghost-dark:hover{border-color:var(--terra);color:var(--terra);}
+.g-btn--gold{background:var(--gold);color:var(--dark);}
+.g-btn-group{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.g-btn-group--c{justify-content:center;}
+
+/* HOW IT WORKS */
+.g-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
+@media(max-width:768px){.g-steps-grid{grid-template-columns:1fr;}}
+.g-step-card{background:var(--white);padding:36px 28px;border:1px solid rgba(44,20,9,.08);}
+.g-step-card__num{font-family:var(--ff-s);font-size:64px;font-weight:400;color:rgba(201,106,74,.15);line-height:1;margin-bottom:12px;}
+.g-step-card__icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(201,106,74,.08);margin-bottom:16px;}
+.g-step-card__title{font-family:var(--ff-s);font-size:22px;color:var(--dark);margin-bottom:8px;}
+.g-step-card__desc{font-size:13px;color:var(--mid);line-height:1.7;}
+
+/* PACKAGES */
+.g-pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+@media(max-width:900px){.g-pkgs{grid-template-columns:1fr;max-width:480px;margin:0 auto;}}
+.g-pkg{position:relative;overflow:hidden;}
+.g-pkg--featured{border:2px solid var(--terra);box-shadow:0 24px 64px rgba(201,106,74,.22);}
+.g-pkg__badge{position:absolute;top:0;right:0;background:var(--terra);color:var(--white);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;}
+.g-pkg__head{padding:32px 28px 24px;text-align:center;}
+.g-pkg__tier{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;}
+.g-pkg__name{font-family:var(--ff-s);font-size:44px;font-weight:700;color:var(--white);margin-bottom:4px;line-height:1;}
+.g-pkg__tag{font-size:12px;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:20px;}
+.g-pkg__price{font-family:var(--ff-s);font-size:48px;font-weight:700;color:var(--white);line-height:1;}
+.g-pkg__price sup{font-size:22px;vertical-align:super;}
+.g-pkg__unit{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;}
+.g-pkg__loc{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;padding:4px 10px;background:rgba(232,184,122,.12);border:1px solid rgba(232,184,122,.2);}
+.g-pkg__body{padding:24px 28px 32px;background:var(--cream);}
+.g-pkg__list{list-style:none;margin-bottom:20px;}
+.g-pkg__list li{font-size:13px;color:var(--mid);padding:9px 0;border-bottom:1px solid rgba(44,20,9,.06);display:flex;gap:10px;align-items:flex-start;line-height:1.5;}
+.g-pkg__list li:last-child{border-bottom:none;}
+.g-pkg__list li::before{content:'';width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23C96A4A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0;margin-top:1px;}
+.g-pkg__note{font-size:11px;color:rgba(44,20,9,.35);margin-bottom:16px;}
+
+/* BOTTLES INFO */
+.g-bottles{background:rgba(44,20,9,.04);border:1px solid rgba(44,20,9,.08);padding:24px 28px;margin-top:32px;}
+.g-bottles__title{font-family:var(--ff-s);font-size:18px;color:var(--dark);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.g-bottles p{font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:8px;}
+.g-bottles strong{color:var(--terra);}
+
+/* TRANSPORT */
+.g-transport-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px;}
+@media(max-width:768px){.g-transport-grid{grid-template-columns:1fr;}}
+.g-transport{background:var(--white);border:1px solid rgba(44,20,9,.1);padding:36px 32px;}
+.g-transport--featured{border-color:var(--terra);border-width:2px;}
+.g-transport__icon{width:52px;height:52px;background:rgba(201,106,74,.08);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.g-transport__price{font-family:var(--ff-s);font-size:52px;color:var(--terra);line-height:1;}
+.g-transport__name{font-family:var(--ff-s);font-size:24px;color:var(--dark);margin:8px 0 2px;}
+.g-transport__cap{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:20px;}
+.g-transport__list{list-style:none;margin-bottom:20px;}
+.g-transport__list li{font-size:13px;color:var(--mid);padding:7px 0;border-bottom:1px solid rgba(44,20,9,.06);display:flex;gap:8px;align-items:center;}
+.g-transport__list li::before{content:'';width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23C96A4A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0;}
+.g-transport__horario{background:rgba(44,20,9,.03);border:1px solid rgba(44,20,9,.06);padding:16px;margin-top:16px;}
+.g-transport__horario-row{display:flex;align-items:center;gap:12px;margin-top:8px;}
+.g-transport__horario-item{text-align:center;}
+.g-transport__horario-time{font-family:var(--ff-s);font-size:22px;color:var(--terra);display:block;}
+.g-transport__horario-desc{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(44,20,9,.4);}
+.g-transport__addon{background:rgba(201,106,74,.06);border:1px solid rgba(201,106,74,.15);padding:20px 24px;margin-top:20px;}
+
+/* CELEBRATION CARDS */
+.g-celeb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
+@media(max-width:768px){.g-celeb-grid{grid-template-columns:1fr;}}
+.g-celeb{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:32px 24px;position:relative;overflow:hidden;transition:var(--trans);}
+.g-celeb:hover{background:rgba(255,255,255,.09);}
+.g-celeb__badge{display:inline-block;background:rgba(232,184,122,.15);color:var(--gold);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border:1px solid rgba(232,184,122,.2);margin-bottom:20px;}
+.g-celeb__icon{width:56px;height:56px;background:rgba(201,106,74,.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.g-celeb__name{font-family:var(--ff-s);font-size:26px;color:var(--white);margin-bottom:4px;}
+.g-celeb__sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:20px;}
+.g-celeb__list{list-style:none;margin-bottom:20px;}
+.g-celeb__list li{font-size:13px;color:rgba(255,255,255,.65);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:10px;align-items:flex-start;line-height:1.5;}
+.g-celeb__list li:last-child{border-bottom:none;}
+.g-celeb__list li::before{content:'';width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23E8B87A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0;margin-top:1px;}
+
+/* DRESS CODE */
+.g-dress-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px;}
+@media(max-width:768px){.g-dress-grid{grid-template-columns:1fr;}}
+.g-dress{padding:32px 28px;background:var(--white);border:1px solid rgba(44,20,9,.08);}
+.g-dress--ok{border-color:rgba(60,180,60,.15);}
+.g-dress--no{border-color:rgba(201,106,74,.2);}
+.g-dress__header{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.g-dress__icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;}
+.g-dress--ok .g-dress__icon{background:rgba(60,180,60,.1);}
+.g-dress--no .g-dress__icon{background:rgba(201,106,74,.1);}
+.g-dress__title{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.g-dress--ok .g-dress__title{color:#2d7a2d;}
+.g-dress--no .g-dress__title{color:var(--terra);}
+.g-dress__list{list-style:none;}
+.g-dress__list li{font-size:13px;color:var(--mid);padding:7px 0;border-bottom:1px solid rgba(44,20,9,.06);display:flex;gap:8px;}
+.g-dress__list li:last-child{border-bottom:none;}
+.g-dress--ok .g-dress__list li::before{content:'✓';color:#2d7a2d;font-weight:700;}
+.g-dress--no .g-dress__list li::before{content:'✕';color:var(--terra);font-weight:700;}
+
+/* RESERVE FLOW */
+.g-flow{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;gap:0;align-items:center;margin-top:40px;}
+@media(max-width:768px){.g-flow{grid-template-columns:1fr;}.g-flow-arrow{transform:rotate(90deg);margin:0 auto;}}
+.g-flow-step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:28px 24px;text-align:center;}
+.g-flow-step__num{width:36px;height:36px;background:var(--gold);color:var(--dark);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.g-flow-step__title{font-family:var(--ff-s);font-size:18px;color:var(--white);margin-bottom:6px;}
+.g-flow-step__desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;}
+.g-flow-arrow{text-align:center;color:var(--gold);font-size:20px;}
+
+/* STICKY WA */
+.g-wa-sticky{position:fixed;bottom:20px;right:24px;z-index:800;background:#25D366;color:var(--white);border-radius:50px;display:flex;align-items:center;gap:8px;padding:13px 20px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 8px 24px rgba(37,211,102,.35);transition:var(--trans);}
+.g-wa-sticky:hover{transform:translateY(-3px);}
+.g-wa-sticky svg{width:20px;height:20px;flex-shrink:0;}
+@media(max-width:768px){.g-wa-sticky span{display:none;}.g-wa-sticky{padding:14px;border-radius:50%;}}
+
+/* FADE */
+.g-fade{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+.g-fade.in{opacity:1;transform:none;}
+.g-fade--d1{transition-delay:.1s;}.g-fade--d2{transition-delay:.2s;}.g-fade--d3{transition-delay:.3s;}
+</style>
+</head>
+<body>
+<!-- GTM noscript --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNWW7LJD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- TOPBAR -->
+<div class="g-topbar">
+  <a href="home/index.html"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hacienda Coyotes</a>
+  <nav>
+    <a href="home/index.html">Home</a>
+    <a href="home/restaurante.html">Restaurante HC</a>
+    <a href="home/hotel.html">Hotel &amp; Glamping</a>
+    <a href="home/contacto.html">Contacto</a>
+  </nav>
+</div>
+
+<!-- NAV -->
+<nav class="g-nav" id="gNav">
+  <a href="index.html"><img class="g-nav__logo" src="uploads/kavala-logo.png" alt="Kavala Day Club"></a>
+  <div class="g-nav__links">
+    <a class="g-nav__back" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Kavala Day Club
+    </a>
+    <a class="g-nav__link" href="#niveles">Packages</a>
+    <a class="g-nav__link" href="#transporte">Transport</a>
+    <a class="g-nav__link" href="#celebracion">Celebrate</a>
+    <a class="g-nav__link" href="#dresscode">Dress Code</a>
+    <a class="g-nav__link g-nav__link--cta" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+un+paquete+grupal+en+Kavala" target="_blank" rel="noopener">Cotizar ahora</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="g-hero">
+  <div class="g-hero__bg" style="background-image:url('uploads/venue-05.jpg');"></div>
+  <div class="g-hero__overlay"></div>
+  <div class="g-hero__content">
+    <img src="uploads/kavala-logo.png" alt="Kavala Day Club" style="height:44px;filter:brightness(0) invert(1);margin-bottom:28px;opacity:.9;">
+    <span class="g-label g-label--gold" style="display:block;margin-bottom:12px;">Group Packages</span>
+    <div class="g-line g-line--gold" style="margin-bottom:20px;"></div>
+    <h1 class="g-h1">Build Your<br>Perfect Day.</h1>
+    <p style="font-family:var(--ff-n);font-size:15px;color:rgba(255,255,255,.7);line-height:1.75;margin:18px 0 36px;max-width:500px;">Combina nivel, transporte y celebración para vivir tu experiencia grupal en Kavala — a 40 min de Guadalajara.</p>
+    <div class="g-btn-group">
+      <a class="g-btn g-btn--terra" href="#niveles">Ver paquetes ↓</a>
+      <a class="g-btn g-btn--wa" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+un+paquete+grupal+en+Kavala" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS NAV -->
+<div class="g-steps">
+  <a href="#niveles" class="g-step">
+    <div class="g-step__num">1</div>
+    <div class="g-step__label">Choose Your Level</div>
+  </a>
+  <a href="#transporte" class="g-step">
+    <div class="g-step__num">2</div>
+    <div class="g-step__label">Add Your Ride</div>
+  </a>
+  <a href="#celebracion" class="g-step">
+    <div class="g-step__num">3</div>
+    <div class="g-step__label">Select Celebration</div>
+  </a>
+  <a href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+un+paquete+grupal+en+Kavala" target="_blank" rel="noopener" class="g-step" style="background:rgba(37,211,102,.15);border-left:1px solid rgba(37,211,102,.3);">
+    <div class="g-step__num" style="border-color:rgba(37,211,102,.5);color:#25D366;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+    <div class="g-step__label" style="color:rgba(37,211,102,.8);">Cotizar ahora</div>
+  </a>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="g-section g-bg-cream">
+  <div class="g-wrap g-tc">
+    <span class="g-label">How It Works</span>
+    <div class="g-line g-line--c"></div>
+    <h2 class="g-h2 g-fade">Una experiencia diseñada<br>para tu grupo.</h2>
+    <p class="g-body g-fade" style="max-width:520px;margin:14px auto 0;">Personaliza cada detalle combinando el nivel, transporte opcional y el kit de celebración perfecto para tu ocasión.</p>
+  </div>
+  <div class="g-wrap" style="margin-top:40px;">
+    <div class="g-steps-grid">
+      <div class="g-step-card g-fade">
+        <div class="g-step-card__num">01</div>
+        <div class="g-step-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8M12 11v11M3 3l3 7h12l3-7H3z"/></svg>
+        </div>
+        <h3 class="g-step-card__title">Choose Your Level</h3>
+        <p class="g-step-card__desc">Silver, Gold o Black. Cada nivel incluye mesa reservada y selección de botellas. Tú decides qué tan memorable.</p>
+      </div>
+      <div class="g-step-card g-fade g-fade--d1">
+        <div class="g-step-card__num">02</div>
+        <div class="g-step-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h13l3 4v6h-2"/><rect x="6" y="15" width="4" height="4" rx="2"/><rect x="14" y="15" width="4" height="4" rx="2"/><path d="M3 13h18"/></svg>
+        </div>
+        <h3 class="g-step-card__title">Add Your Ride</h3>
+        <p class="g-step-card__desc">Agrega transporte redondo desde Guadalajara y olvídate de manejar. Incluye agua y Welcome Drink al llegar.</p>
+      </div>
+      <div class="g-step-card g-fade g-fade--d2">
+        <div class="g-step-card__num">03</div>
+        <div class="g-step-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <h3 class="g-step-card__title">Select Your Celebration</h3>
+        <p class="g-step-card__desc">Cumpleaños, despedida o alguna ocasión especial. Activamos el kit sin costo adicional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="niveles" class="g-section g-bg-dark">
+  <div class="g-wrap g-tc" style="margin-bottom:48px;">
+    <span class="g-label g-label--gold">Experience Levels</span>
+    <div class="g-line g-line--c g-line--gold"></div>
+    <h2 class="g-h2 g-h2--light g-fade">Choose Your Level.</h2>
+    <p class="g-body g-body--light g-fade" style="max-width:480px;margin:14px auto 0;">Precios calculados para grupos de 20 personas. Mínimo de participantes requerido.</p>
+  </div>
+  <div class="g-wrap">
+    <div class="g-pkgs">
+      <!-- SILVER -->
+      <div class="g-pkg g-fade">
+        <div class="g-pkg__head" style="background:#222;">
+          <div class="g-pkg__tier">Level 01</div>
+          <div class="g-pkg__name" style="color:#C0C0C0;">Silver</div>
+          <div class="g-pkg__tag" style="color:rgba(192,192,192,.5);">Fun &amp; Essential.</div>
+          <div class="g-pkg__price" style="color:#C0C0C0;"><sup>$</sup>12,000</div>
+          <div class="g-pkg__unit">MXN total · desde $600 p/p</div>
+          <div class="g-pkg__loc">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Mesa en Main Area
+          </div>
+        </div>
+        <div class="g-pkg__body">
+          <ul class="g-pkg__list">
+            <li>5 Botellas Estándar de 700 ml</li>
+            <li>25 Mezcladores incluidos</li>
+            <li>15 Perlas negras</li>
+            <li>Kit de celebración sin costo</li>
+            <li>Servicio dedicado</li>
+          </ul>
+          <p class="g-pkg__note">Propina no incluida · mínimo 20 pax</p>
+          <a class="g-btn g-btn--ghost-dark" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+paquete+Silver+en+Kavala" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Cotizar Silver →</a>
+        </div>
+      </div>
+      <!-- GOLD -->
+      <div class="g-pkg g-fade g-fade--d1" style="position:relative;">
+        <div class="g-pkg__badge" style="top:0;right:0;">Más popular</div>
+        <div class="g-pkg__head" style="background:var(--terra);">
+          <div class="g-pkg__tier" style="color:rgba(255,255,255,.6);">Level 02</div>
+          <div class="g-pkg__name">Gold</div>
+          <div class="g-pkg__tag">Premium Bottles.</div>
+          <div class="g-pkg__price"><sup>$</sup>17,000</div>
+          <div class="g-pkg__unit">MXN total · desde $850 p/p</div>
+          <div class="g-pkg__loc">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 12s3-4 6-4 6 4 6 4 3-4 6-4"/><path d="M2 17s3-4 6-4 6 4 6 4 3-4 6-4"/></svg>
+            Mesa en Pool Area
+          </div>
+        </div>
+        <div class="g-pkg__body">
+          <ul class="g-pkg__list">
+            <li>5 Botellas Premium de 700 ml</li>
+            <li>1 Botella Chandon Brut</li>
+            <li>25 Mezcladores incluidos</li>
+            <li>15 Perlas negras</li>
+            <li>Kit de celebración sin costo</li>
+            <li>Servicio VIP dedicado</li>
+          </ul>
+          <p class="g-pkg__note">Propina no incluida · mínimo 20 pax</p>
+          <a class="g-btn g-btn--terra" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+paquete+Gold+en+Kavala" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Cotizar Gold →</a>
+        </div>
+      </div>
+      <!-- BLACK -->
+      <div class="g-pkg g-fade g-fade--d2">
+        <div class="g-pkg__head" style="background:#080808;">
+          <div class="g-pkg__tier" style="color:rgba(255,255,255,.3);">Level 03</div>
+          <div class="g-pkg__name" style="color:#D0A870;">Black</div>
+          <div class="g-pkg__tag" style="color:rgba(208,168,112,.5);">Full VIP Level.</div>
+          <div class="g-pkg__price" style="color:#D0A870;"><sup>$</sup>20,000</div>
+          <div class="g-pkg__unit">MXN total · desde $1,000 p/p</div>
+          <div class="g-pkg__loc" style="color:#D0A870;border-color:rgba(208,168,112,.2);background:rgba(208,168,112,.08);">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 20h20M5 20l1.5-8L12 16l5.5-8L20 20"/></svg>
+            Mesa Deluxe Lounge
+          </div>
+        </div>
+        <div class="g-pkg__body" style="background:#F5F0E8;">
+          <ul class="g-pkg__list">
+            <li>3 Dobel Diamante 1.75 L</li>
+            <li>1 Botella Hpnotiq 750 ml</li>
+            <li>30 Mezcladores incluidos</li>
+            <li>15 Perlas negras</li>
+            <li>Kit de celebración personalizado</li>
+            <li>Servicio exclusivo dedicado</li>
+          </ul>
+          <p class="g-pkg__note">Propina no incluida · mínimo 20 pax</p>
+          <a class="g-btn g-btn--ghost-dark" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+paquete+Black+en+Kavala" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Cotizar Black →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTLES INFO -->
+    <div class="g-bottles g-fade">
+      <h4 class="g-bottles__title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+        Opciones de botellas
+      </h4>
+      <p><strong>Estándar (Silver):</strong> Dobel Blanco, 1800 Blanco, Patrón Silver, Absolut, Bacardi, Bombay, Torres 10, Jägermeister.</p>
+      <p><strong>Premium (Gold):</strong> Dobel Diamante, 1800 Cristalino, Patrón Cristalino, JW Black Label, Grey Goose, Hendrick's, Martell VSOP.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPORT -->
+<section id="transporte" class="g-section g-bg-cream">
+  <div class="g-wrap">
+    <div style="margin-bottom:48px;">
+      <span class="g-label">Add Your Ride</span>
+      <div class="g-line"></div>
+      <h2 class="g-h2 g-fade">Get There Together.</h2>
+      <p class="g-body g-fade" style="max-width:520px;margin-top:12px;">Servicio opcional de transporte redondo desde Guadalajara. Tú solo disfruta — nosotros nos encargamos de llevarte y traerte.</p>
+    </div>
+    <div class="g-transport-grid">
+      <div class="g-transport g-fade">
+        <div class="g-transport__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h13l3 4v6h-2"/><rect x="6" y="15" width="4" height="4" rx="2"/><rect x="14" y="15" width="4" height="4" rx="2"/><path d="M3 13h18"/></svg>
+        </div>
+        <div class="g-transport__price">$4,000</div>
+        <div class="g-transport__name">Shuttle Mediano</div>
+        <div class="g-transport__cap">8 – 14 personas · desde $285 p/p</div>
+        <ul class="g-transport__list">
+          <li>Viaje redondo GDL — Kavala — GDL</li>
+          <li>Agua embotellada de cortesía</li>
+          <li>Welcome Drink al llegar a Kavala</li>
+          <li>Chofer capacitado · Sprinter reciente</li>
+        </ul>
+        <div class="g-transport__horario">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(44,20,9,.45);margin-bottom:6px;">Horario estándar</div>
+          <div class="g-transport__horario-row">
+            <div class="g-transport__horario-item"><span class="g-transport__horario-time">1:30 pm</span><span class="g-transport__horario-desc">Salida GDL</span></div>
+            <span style="color:var(--terra);font-size:18px;flex:1;text-align:center;">→</span>
+            <div class="g-transport__horario-item"><span class="g-transport__horario-time">10:30 pm</span><span class="g-transport__horario-desc">Regreso GDL</span></div>
+          </div>
+          <div style="font-size:11px;color:rgba(44,20,9,.45);margin-top:8px;display:flex;align-items:center;gap:4px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Punto de salida: Hotel RIU Guadalajara
+          </div>
+        </div>
+        <button class="g-btn g-btn--terra" onclick="openShuttleModal('https://widget.riservi.com/allies/restaurant-widget/kavala-day-club-21l?utm_campaign=Pagina%20Web')" style="margin-top:24px;width:100%;justify-content:center;cursor:pointer;">Reservar con tarjeta</button>:center;cursor:pointer;">Reservar con tarjeta</button>
+        <a class="g-btn g-btn--wa" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+shuttle+mediano+para+Kavala" target="_blank" rel="noopener" style="margin-top:8px;width:100%;justify-content:center;display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+      </div>
+      <div class="g-transport g-transport--featured g-fade g-fade--d1">
+        <div class="g-transport__icon" style="background:rgba(201,106,74,.12);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="g-transport__price">$5,000</div>
+        <div class="g-transport__name">Shuttle Grande</div>
+        <div class="g-transport__cap">15 – 20 personas · desde $250 p/p</div>
+        <ul class="g-transport__list">
+          <li>Viaje redondo GDL — Kavala — GDL</li>
+          <li>Agua embotellada de cortesía</li>
+          <li>Welcome Drink al llegar a Kavala</li>
+          <li>Chofer capacitado · Sprinter reciente</li>
+          <li>Ideal para grupos grandes</li>
+        </ul>
+        <div class="g-transport__horario">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(44,20,9,.45);margin-bottom:6px;">Horario estándar</div>
+          <div class="g-transport__horario-row">
+            <div class="g-transport__horario-item"><span class="g-transport__horario-time">1:30 pm</span><span class="g-transport__horario-desc">Salida GDL</span></div>
+            <span style="color:var(--terra);font-size:18px;flex:1;text-align:center;">→</span>
+            <div class="g-transport__horario-item"><span class="g-transport__horario-time">10:30 pm</span><span class="g-transport__horario-desc">Regreso GDL</span></div>
+          </div>
+          <div style="font-size:11px;color:rgba(44,20,9,.45);margin-top:8px;display:flex;align-items:center;gap:4px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Punto de salida: Hotel RIU Guadalajara
+          </div>
+        </div>
+        <button class="g-btn g-btn--terra" onclick="openShuttleModal('https://widget.riservi.com/allies/restaurant-widget/kavala-day-club-21l?utm_campaign=Pagina%20Web')" style="margin-top:24px;width:100%;justify-content:center;cursor:pointer;">Reservar con tarjeta</button>:center;cursor:pointer;">Reservar con tarjeta</button>
+        <a class="g-btn g-btn--wa" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+shuttle+grande+para+Kavala" target="_blank" rel="noopener" style="margin-top:8px;width:100%;justify-content:center;display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="g-transport__addon g-fade">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:rgba(201,106,74,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:6px;">Private Departure Add-On · +$500 MXN</div>
+          <p style="font-size:13px;color:var(--mid);line-height:1.7;">¿Prefieres salir desde otro punto o en horario diferente? Por $500 MXN adicionales puedes elegir tu lugar y hora de salida. 10 minutos de tolerancia · duración aprox. 1 hora.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CELEBRACIÓN -->
+<section id="celebracion" class="g-section g-bg-dark">
+  <div class="g-wrap g-tc" style="margin-bottom:48px;">
+    <span class="g-label g-label--gold">Select Your Celebration</span>
+    <div class="g-line g-line--c g-line--gold"></div>
+    <h2 class="g-h2 g-h2--light g-fade">Dinos qué estás celebrando.</h2>
+    <p class="g-body g-body--light g-fade" style="max-width:480px;margin:14px auto 0;">Activamos el kit correspondiente sin costo adicional. Es momento de celebrar.</p>
+  </div>
+  <div class="g-wrap">
+    <div class="g-celeb-grid">
+      <!-- BIRTHDAY -->
+      <div id="cumpleanos" class="g-celeb g-fade">
+        <div class="g-celeb__badge">Sin costo extra · al contratar paquete grupal</div>
+        <div class="g-celeb__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20M7 8v2M12 8v2M17 8v2M7 4a1 1 0 0 0-1 1v1h2V5a1 1 0 0 0-1-1zM12 4a1 1 0 0 0-1 1v1h2V5a1 1 0 0 0-1-1zM17 4a1 1 0 0 0-1 1v1h2V5a1 1 0 0 0-1-1z"/></svg>
+        </div>
+        <div class="g-celeb__name">Birthday</div>
+        <div class="g-celeb__sub">Tu experiencia de cumpleaños</div>
+        <ul class="g-celeb__list">
+          <li>Letrero personalizado a la entrega de botellas</li>
+          <li>Cupcake cumpleañero</li>
+          <li>Shots de cortesía</li>
+          <li>Souvenir especial para el festejado</li>
+          <li>Souvenir especial para el grupo</li>
+        </ul>
+        <a class="g-btn g-btn--ghost" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+un+cumpleanos+en+Kavala" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Reservar cumpleaños →</a>
+      </div>
+      <!-- DESPEDIDA -->
+      <div id="despedida" class="g-celeb g-fade g-fade--d1" style="border-color:rgba(201,106,74,.2);background:rgba(201,106,74,.05);">
+        <div class="g-celeb__badge" style="background:rgba(201,106,74,.2);color:var(--terra);border-color:rgba(201,106,74,.3);">Sin costo extra · al contratar paquete grupal</div>
+        <div class="g-celeb__icon" style="background:rgba(201,106,74,.2);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+        </div>
+        <div class="g-celeb__name" style="color:var(--terra);">Bride &amp; Groom Squad</div>
+        <div class="g-celeb__sub">Tu experiencia de despedida</div>
+        <ul class="g-celeb__list">
+          <li>Letrero personalizado a la entrega de botellas</li>
+          <li>Velos o bandas especiales de despedida</li>
+          <li>Festejo especial por nuestro staff de animación</li>
+          <li>Souvenir especial para el grupo</li>
+          <li>Shots de cortesía</li>
+        </ul>
+        <a class="g-btn g-btn--terra" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+una+despedida+en+Kavala" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Reservar despedida →</a>
+      </div>
+      <!-- SPECIAL OCCASION -->
+      <div class="g-celeb g-fade g-fade--d2">
+        <div class="g-celeb__badge">Sin costo extra · al contratar paquete grupal</div>
+        <div class="g-celeb__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div class="g-celeb__name">Special Occasion</div>
+        <div class="g-celeb__sub">Aniversarios, ascensos, graduaciones…</div>
+        <ul class="g-celeb__list">
+          <li>Letrero personalizado a la entrega de botellas</li>
+          <li>Shots de cortesía</li>
+          <li>Souvenir especial para el grupo</li>
+        </ul>
+        <a class="g-btn g-btn--ghost" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+una+ocasion+especial+en+Kavala" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Reservar ocasión especial →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRESS CODE -->
+<section id="dresscode" class="g-section g-bg-cream">
+  <div class="g-wrap g-tc" style="margin-bottom:48px;">
+    <span class="g-label">Dress the Experience</span>
+    <div class="g-line g-line--c"></div>
+    <h2 class="g-h2 g-fade">Oasis Chic.</h2>
+    <p class="g-body g-fade" style="max-width:460px;margin:14px auto 0;">Prepárate para vivir la experiencia al máximo con el look correcto.</p>
+  </div>
+  <div class="g-wrap">
+    <div class="g-dress-grid">
+      <div class="g-dress g-dress--ok g-fade">
+        <div class="g-dress__header">
+          <div class="g-dress__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a2d" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span class="g-dress__title">Dress code recomendado</span>
+        </div>
+        <ul class="g-dress__list">
+          <li>Traje de baño</li>
+          <li>Outfit fresco y elegante</li>
+          <li>Sandalias o calzado cómodo</li>
+          <li>Looks instagrameables</li>
+          <li>Abrigo ligero para la noche</li>
+        </ul>
+      </div>
+      <div class="g-dress g-dress--no g-fade g-fade--d1">
+        <div class="g-dress__header">
+          <div class="g-dress__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          </div>
+          <span class="g-dress__title">No permitido</span>
+        </div>
+        <ul class="g-dress__list">
+          <li>Ropa de trabajo o formal</li>
+          <li>Tacones altos (área de alberca)</li>
+          <li>Ropa interior visible</li>
+          <li>Calzado deportivo sucio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO RESERVE -->
+<section class="g-section g-bg-dark">
+  <div class="g-wrap g-tc" style="margin-bottom:48px;">
+    <span class="g-label g-label--gold">How to Reserve</span>
+    <div class="g-line g-line--c g-line--gold"></div>
+    <h2 class="g-h2 g-h2--light g-fade">En 3 pasos, listo.</h2>
+  </div>
+  <div class="g-wrap">
+    <div class="g-flow">
+      <div class="g-flow-step g-fade">
+        <div class="g-flow-step__num">1</div>
+        <div class="g-flow-step__title">Elige tu combo</div>
+        <p class="g-flow-step__desc">Selecciona nivel + transporte + celebración</p>
+      </div>
+      <div class="g-flow-arrow">→</div>
+      <div class="g-flow-step g-fade g-fade--d1">
+        <div class="g-flow-step__num">2</div>
+        <div class="g-flow-step__title">Contáctanos</div>
+        <p class="g-flow-step__desc">Por WhatsApp o teléfono en horario de atención</p>
+      </div>
+      <div class="g-flow-arrow">→</div>
+      <div class="g-flow-step g-fade g-fade--d2">
+        <div class="g-flow-step__num">3</div>
+        <div class="g-flow-step__title">Confirma con anticipo</div>
+        <p class="g-flow-step__desc">Asegura tu lugar y disfruta tu día sin preocupaciones</p>
+      </div>
+    </div>
+    <div class="g-tc" style="margin-top:48px;">
+      <a class="g-btn g-btn--wa" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+mi+experiencia+grupal+en+Kavala" target="_blank" rel="noopener" style="display:inline-flex;font-size:13px;padding:16px 36px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar mi experiencia grupal
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a0a04;padding:36px 0 24px;">
+  <div class="g-wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+    <div>
+      <img src="uploads/kavala-logo.png" alt="Kavala Day Club" style="height:22px;filter:brightness(0) invert(1);opacity:.7;margin-bottom:10px;">
+      <p style="font-size:11px;color:rgba(255,255,255,.25);">© 2026 Kavala Day Club · Hacienda Coyotes</p>
+    </div>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:11px;color:rgba(255,255,255,.3);">← Volver a Kavala</a>
+      <a href="https://wa.me/523316990962" style="font-size:11px;color:rgba(255,255,255,.3);">WhatsApp</a>
+      <a href="tel:+523321012205" style="font-size:11px;color:rgba(255,255,255,.3);">(+52) 332 101 2205</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal transporte Riservi -->
+<div id="gShuttleModal" style="display:none;position:fixed;inset:0;z-index:9991;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;width:100%;max-width:520px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:var(--dark);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="font-family:var(--ff-s);font-size:22px;color:#fff;font-weight:600;">Reservar Shuttle</div>
+      <button onclick="closeShuttleModal()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);font-size:24px;line-height:1;padding:4px;">&times;</button>
+    </div>
+    <iframe id="gShuttleFrame" src="" title="Reservar Shuttle" style="flex:1;min-height:560px;border:none;width:100%;" allow="payment"></iframe>
+  </div>
+</div>
+
+<!-- STICKY WA -->
+<a class="g-wa-sticky" href="https://wa.me/523316990962?text=Hola,+quiero+cotizar+un+paquete+grupal+en+Kavala" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Cotizar ahora</span>
+</a>
+
+<script>
+function openShuttleModal(url) {
+  const modal = document.getElementById('gShuttleModal');
+  document.getElementById('gShuttleFrame').src = url;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeShuttleModal() {
+  document.getElementById('gShuttleModal').style.display = 'none';
+  document.getElementById('gShuttleFrame').src = '';
+  document.body.style.overflow = '';
+}
+document.getElementById('gShuttleModal').addEventListener('click', function(e) {
+  if (e.target === this) closeShuttleModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeShuttleModal(); });
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('gNav');
+  if (window.scrollY > 60) { nav.classList.add('g-nav--scrolled'); nav.style.top='0'; }
+  else { nav.classList.remove('g-nav--scrolled'); nav.style.top='33px'; }
+});
+
+// Fade on scroll
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+}, {threshold:0.1});
+document.querySelectorAll('.g-fade').forEach(el => obs.observe(el));
+
+// Anchor #despedida scroll
+if (location.hash === '#despedida') {
+  setTimeout(() => {
+    const el = document.getElementById('despedida');
+    if (el) el.scrollIntoView({behavior:'smooth', block:'center'});
+  }, 400);
+}
+</script>
+</body>
+</html>

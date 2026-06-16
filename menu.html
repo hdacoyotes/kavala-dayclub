@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú | Kavala Day Club</title>
+<meta name="description" content="Menú de bebidas y alimentos de Kavala Day Club. Mixología de autor, champagne, hookahs, destilados y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --terra:#C96A4A;--terra-d:#A8563B;--gold:#E8B87A;
+  --cream:#F9F5F0;--dark:#2C1409;--mid:#5C3317;
+  --sand:#E8D5B0;--white:#FFFFFF;
+  --ff-s:'Cormorant Garamond',Georgia,serif;
+  --ff-n:'Montserrat',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-n);background:var(--cream);color:var(--dark);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+/* NAV */
+.m-nav{background:var(--dark);padding:0 40px;height:62px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.m-nav__logo{height:18px;filter:brightness(0) invert(1);opacity:.9;}
+.m-nav__back{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px;transition:color .2s;}
+.m-nav__back:hover{color:var(--white);}
+.m-nav__back svg{width:14px;height:14px;}
+@media(max-width:768px){.m-nav{padding:0 20px;}}
+
+/* TOP BAR */
+.m-topbar{background:#1a0a04;padding:7px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;border-bottom:1px solid rgba(255,255,255,.07);}
+.m-topbar a{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:5px;}
+.m-topbar nav{display:flex;}
+.m-topbar nav a{padding:3px 14px;border-right:1px solid rgba(255,255,255,.08);}
+.m-topbar nav a:last-child{border-right:none;}
+
+/* HERO */
+.m-hero{background:var(--dark);padding:64px 40px 52px;text-align:center;position:relative;overflow:hidden;}
+.m-hero__bg{position:absolute;inset:0;background:url('uploads/venue-03.jpg') center/cover;opacity:.18;}
+.m-hero__diamond{position:absolute;right:-40px;top:-40px;width:320px;height:320px;opacity:.04;pointer-events:none;}
+.m-hero__content{position:relative;z-index:2;}
+.m-hero__label{font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.m-hero__title{font-family:var(--ff-s);font-size:clamp(48px,8vw,96px);font-weight:400;font-style:italic;color:var(--white);line-height:.95;margin-bottom:16px;}
+.m-hero__sub{font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;margin-bottom:32px;}
+.m-hero__icon{margin:0 auto 20px;}
+.m-hero__tabs{display:flex;justify-content:center;gap:2px;flex-wrap:wrap;margin-top:24px;}
+.m-hero__tab{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s;border:none;font-family:var(--ff-n);}
+.m-hero__tab.active,.m-hero__tab:hover{background:var(--terra);color:var(--white);}
+
+/* LAYOUT */
+.m-wrap{max-width:1000px;margin:0 auto;padding:0 40px;}
+@media(max-width:768px){.m-wrap{padding:0 20px;}}
+.m-section{padding:64px 0;display:none;}
+.m-section.active{display:block;}
+.m-section-title{font-family:var(--ff-s);font-size:clamp(32px,5vw,52px);font-weight:400;color:var(--dark);margin-bottom:8px;line-height:1.1;}
+.m-section-sub{font-size:13px;color:var(--mid);margin-bottom:48px;line-height:1.7;max-width:560px;}
+.m-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:10px;}
+.m-line{width:32px;height:2px;background:var(--terra);margin:10px 0 28px;}
+
+/* CATEGORY */
+.m-category{margin-bottom:52px;}
+.m-category-title{font-family:var(--ff-s);font-size:26px;font-weight:600;color:var(--dark);padding-bottom:12px;border-bottom:2px solid var(--terra);margin-bottom:0;display:flex;align-items:center;gap:10px;}
+.m-category-title svg{width:20px;height:20px;color:var(--terra);flex-shrink:0;}
+.m-category-desc{font-size:12px;color:rgba(92,51,23,.6);margin:8px 0 20px;font-style:italic;line-height:1.6;}
+
+/* ITEM */
+.m-item{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid rgba(44,20,9,.06);}
+.m-item:last-child{border-bottom:none;}
+.m-item__left{flex:1;}
+.m-item__name{font-family:var(--ff-s);font-size:18px;color:var(--dark);margin-bottom:3px;font-weight:500;}
+.m-item__desc{font-size:11px;color:rgba(92,51,23,.55);line-height:1.55;font-style:italic;}
+.m-item__price{font-family:var(--ff-s);font-size:20px;color:var(--terra);font-weight:600;flex-shrink:0;white-space:nowrap;}
+
+/* GRID */
+.m-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;}
+@media(max-width:768px){.m-grid-2{grid-template-columns:1fr;}}
+.m-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;}
+@media(max-width:900px){.m-grid-3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.m-grid-3{grid-template-columns:1fr;}}
+
+/* DIVIDER */
+.m-diamond-div{text-align:center;padding:16px 0;color:var(--terra);font-size:8px;letter-spacing:.3em;text-transform:uppercase;display:flex;align-items:center;gap:12px;opacity:.5;}
+.m-diamond-div::before,.m-diamond-div::after{content:'';flex:1;height:1px;background:var(--terra);opacity:.3;}
+
+/* FOOTER */
+.m-footer{background:var(--dark);padding:32px 40px;text-align:center;}
+.m-footer p{font-size:12px;color:rgba(255,255,255,.3);}
+.m-footer a{color:var(--terra);}
+
+/* ── DUAL PRICING ─────────────────────── */
+.m-prices-header{display:flex;justify-content:flex-end;gap:0;margin-bottom:0;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(92,51,23,.35);padding-bottom:8px;border-bottom:2px solid var(--terra);}
+.m-prices-header span{min-width:72px;text-align:right;}
+.m-dual-price{display:flex;gap:0;align-items:baseline;flex-shrink:0;}
+.m-dual-price .copa{font-family:var(--ff-s);font-size:17px;color:var(--terra);font-weight:600;min-width:72px;text-align:right;}
+.m-dual-price .botella{font-family:var(--ff-s);font-size:15px;color:rgba(92,51,23,.5);font-weight:500;min-width:80px;text-align:right;}
+.m-item--botella .m-item__name{font-family:var(--ff-s);font-size:17px;}
+
+/* ── SHOTS TABLE ──────────────────────── */
+.m-shots-block{margin-top:8px;}
+.m-shots-head{display:grid;grid-template-columns:1fr 90px 90px;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(92,51,23,.4);padding-bottom:8px;border-bottom:2px solid var(--terra);}
+.m-shots-head span:not(:first-child){text-align:right;}
+.m-shot-row{display:grid;grid-template-columns:1fr 90px 90px;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(44,20,9,.06);}
+.m-shot-row:last-child{border-bottom:none;}
+.m-shot-name{font-family:var(--ff-s);font-size:18px;color:var(--dark);font-weight:500;}
+.m-shot-price{font-family:var(--ff-s);font-size:18px;color:var(--terra);font-weight:600;text-align:right;}
+
+/* ── BADGE ────────────────────────────── */
+.m-badge{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--terra);color:white;padding:2px 6px;margin-left:8px;display:inline-block;vertical-align:middle;line-height:1.5;}
+
+/* ── HOOKAH NOTE ──────────────────────── */
+.m-hookah-note{font-size:12px;color:rgba(92,51,23,.5);font-style:italic;padding:16px 0 24px;border-bottom:1px solid rgba(44,20,9,.06);margin-bottom:4px;line-height:1.7;}
+
+/* ── EXTRAS GRID ──────────────────────── */
+.m-extras-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px;margin-top:8px;}
+.m-extra-card{background:var(--white);border:1px solid rgba(44,20,9,.06);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.m-extra-name{font-family:var(--ff-s);font-size:17px;color:var(--dark);}
+.m-extra-price{font-family:var(--ff-s);font-size:18px;color:var(--terra);font-weight:600;flex-shrink:0;}
+
+/* ── PACKAGE CARDS ───────────────────────── */
+.m-pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;margin-top:8px;}
+.m-pkg{border:1px solid rgba(44,20,9,.08);overflow:hidden;}
+.m-pkg--gold{border:2px solid var(--terra);box-shadow:0 16px 40px rgba(201,106,74,.15);}
+.m-pkg__head{padding:28px 24px 20px;text-align:center;}
+.m-pkg__head--silver{background:#1e1e1e;}
+.m-pkg__head--gold{background:var(--terra);}
+.m-pkg__head--black{background:#080808;}
+.m-pkg__head--casita{background:var(--dark);}
+.m-pkg__badge{font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,255,255,.15);color:rgba(255,255,255,.7);padding:3px 10px;display:inline-block;margin-bottom:10px;}
+.m-pkg__name{font-family:var(--ff-s);font-size:38px;font-weight:700;line-height:1;margin-bottom:4px;}
+.m-pkg__tag{font-size:11px;font-style:italic;margin-bottom:16px;}
+.m-pkg__price{font-family:var(--ff-s);font-size:44px;font-weight:700;line-height:1;}
+.m-pkg__price sup{font-size:20px;vertical-align:super;}
+.m-pkg__unit{font-size:10px;margin-top:4px;opacity:.5;}
+.m-pkg__loc{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:14px;padding:4px 10px;background:rgba(232,184,122,.12);border:1px solid rgba(232,184,122,.2);}
+.m-pkg__body{background:var(--cream);padding:20px 24px 24px;}
+.m-pkg__list{list-style:none;margin-bottom:16px;}
+.m-pkg__list li{font-size:13px;color:var(--mid);padding:8px 0;border-bottom:1px solid rgba(44,20,9,.06);display:flex;gap:10px;align-items:flex-start;line-height:1.5;}
+.m-pkg__list li:last-child{border-bottom:none;}
+.m-pkg__list li::before{content:'';width:15px;height:15px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23C96A4A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0;margin-top:1px;}
+.m-pkg__note{font-size:11px;color:rgba(44,20,9,.35);margin-bottom:14px;}
+.m-pkg__cta{display:flex;align-items:center;justify-content:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;background:var(--terra);color:white;padding:12px 20px;width:100%;border:none;font-family:var(--ff-n);cursor:pointer;text-decoration:none;}
+.m-pkg__cta:hover{background:var(--terra-d);}
+.m-pkg__cta--dark{background:var(--dark);}
+.m-pkg__cta--dark:hover{background:#3d1a0a;}
+
+/* ── HOUSE BADGE ──────────────────────── */
+.m-item__name .house{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--dark);padding:1px 5px;margin-left:7px;display:inline-block;vertical-align:middle;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="m-topbar">
+  <a href="home/index.html"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hacienda Coyotes</a>
+  <nav>
+    <a href="home/index.html">Home</a>
+    <a href="home/restaurante.html">Restaurante HC</a>
+    <a href="home/hotel.html">Hotel &amp; Glamping</a>
+    <a href="home/contacto.html">Contacto</a>
+  </nav>
+</div>
+
+<!-- NAV -->
+<nav class="m-nav">
+  <a href="index.html" class="m-nav__back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Kavala Day Club
+  </a>
+  <img class="m-nav__logo" src="uploads/kavala-logo.png" alt="Kavala Day Club">
+  <div style="width:120px;"></div>
+</nav>
+
+<!-- HERO -->
+<div class="m-hero">
+  <div class="m-hero__bg"></div>
+  <svg class="m-hero__diamond" viewBox="0 0 200 200" fill="none"><polygon points="100,4 196,100 100,196 4,100" stroke="white" stroke-width="1.5" fill="none"/><polygon points="100,28 172,100 100,172 28,100" stroke="white" stroke-width=".8" fill="none" opacity=".6"/></svg>
+  <div class="m-hero__content">
+    <svg class="m-hero__icon" width="48" height="64" viewBox="0 0 48 64" fill="none">
+      <path d="M8 4 L40 4 L28 32 L28 52 L36 52 L36 58 L12 58 L12 52 L20 52 L20 32 Z" stroke="var(--terra)" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+      <ellipse cx="24" cy="22" rx="8" ry="4" fill="rgba(201,106,74,.15)" stroke="none"/>
+    </svg>
+    <div class="m-hero__label">Kavala Day Club</div>
+    <h1 class="m-hero__title">Menú</h1>
+    <p class="m-hero__sub">Pool · Bar · Kitchen</p>
+    <div class="m-hero__tabs" id="menuTabs">
+      <button class="m-hero__tab active" data-tab="cocteleria">Mixología</button>
+      <button class="m-hero__tab" data-tab="champagne">Champagne</button>
+      <button class="m-hero__tab" data-tab="hookahs">Hookahs</button>
+      <button class="m-hero__tab" data-tab="alimentos">Alimentos</button>
+      <button class="m-hero__tab" data-tab="destilados">Destilados</button>
+      <button class="m-hero__tab" data-tab="extras">Extras</button>
+      <button class="m-hero__tab" data-tab="paquetes">Paquetes</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MIXOLOGÍA
+     ══════════════════════════════════════ -->
+<section class="m-section active" id="cocteleria">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Signature Drinks</div>
+    <h2 class="m-section-title">Mixología de Autor</h2>
+    <div class="m-line"></div>
+    <p class="m-section-sub">Cócteles diseñados exclusivamente para Kavala. Coloridos, memorables y listos para el pool.</p>
+    <div style="margin-bottom:40px;overflow:hidden;height:340px;">
+      <img src="uploads/Mixologia Kavala.png" alt="Mixología Kavala Day Club" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;">
+    </div>
+
+    <div class="m-grid-2">
+      <div class="m-category">
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Sunset Tequila</div></div>
+          <div class="m-item__price">$180</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Tropical Vibes</div></div>
+          <div class="m-item__price">$180</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Cucumber Margarita</div></div>
+          <div class="m-item__price">$190</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Piña Kavala</div></div>
+          <div class="m-item__price">$170</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Rosa Escarlata</div></div>
+          <div class="m-item__price">$170</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Mojito Agave</div></div>
+          <div class="m-item__price">$170</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Sangrita VIP</div></div>
+          <div class="m-item__price">$190</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Coloradito</div></div>
+          <div class="m-item__price">$180</div>
+        </div>
+      </div>
+      <div class="m-category">
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Paloma Perfecta</div></div>
+          <div class="m-item__price">$180</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Altos Rojos</div></div>
+          <div class="m-item__price">$180</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Aperol Spritz</div></div>
+          <div class="m-item__price">$230</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">St-Germain Spritz</div></div>
+          <div class="m-item__price">$250</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Carajillo</div></div>
+          <div class="m-item__price">$190</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Perla Negra</div></div>
+          <div class="m-item__price">$140</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Bufanda</div></div>
+          <div class="m-item__price">$150</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Mocktil <span style="font-size:10px;font-style:normal;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(92,51,23,.4);margin-left:4px;">sin alcohol</span></div></div>
+          <div class="m-item__price">$100</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-diamond-div" style="margin-top:8px;"><span>◆ Shots ◆</span></div>
+    <div class="m-shots-block" style="max-width:560px;margin-top:16px;">
+      <div class="m-shots-head">
+        <span>Nombre</span>
+        <span>6 shots</span>
+        <span>10 shots</span>
+      </div>
+      <div class="m-shot-row">
+        <span class="m-shot-name">Veneno Cascabel</span>
+        <span class="m-shot-price">$190</span>
+        <span class="m-shot-price">$300</span>
+      </div>
+      <div class="m-shot-row">
+        <span class="m-shot-name">Corazón de Fuego</span>
+        <span class="m-shot-price">$180</span>
+        <span class="m-shot-price">$290</span>
+      </div>
+      <div class="m-shot-row">
+        <span class="m-shot-name">Palmera Shots</span>
+        <span class="m-shot-price">$180</span>
+        <span class="m-shot-price">$290</span>
+      </div>
+      <div class="m-shot-row">
+        <span class="m-shot-name">Velvet Mazapán</span>
+        <span class="m-shot-price">$210</span>
+        <span class="m-shot-price">$320</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CHAMPAGNE
+     ══════════════════════════════════════ -->
+<section class="m-section" id="champagne">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Bubbles</div>
+    <h2 class="m-section-title">Champagne &amp; Espumosos</h2>
+    <div class="m-line"></div>
+    <div class="m-grid-2">
+      <div class="m-category">
+        <div class="m-category-title" style="font-size:20px;margin-bottom:8px;">Chandon</div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Chandon Brut 750ml <span class="m-badge">Nuevo</span></div></div>
+          <div class="m-item__price">$2,000</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Chandon Rosé 750ml <span class="m-badge">Nuevo</span></div></div>
+          <div class="m-item__price">$2,000</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Chandon Garden Spritz 750ml <span class="m-badge">Nuevo</span></div></div>
+          <div class="m-item__price">$1,800</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Belaire Fantôme Rosé</div></div>
+          <div class="m-item__price">$3,200</div>
+        </div>
+      </div>
+      <div class="m-category">
+        <div class="m-category-title" style="font-size:20px;margin-bottom:8px;">Moët &amp; Chandon</div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Impérial Brut 750ml</div></div>
+          <div class="m-item__price">$3,200</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Impérial Brut 1.5 Lt</div></div>
+          <div class="m-item__price">$6,500</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Ice Impérial Rosé 750ml</div></div>
+          <div class="m-item__price">$3,500</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Ice Impérial 750ml</div></div>
+          <div class="m-item__price">$4,000</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Ice Impérial 1.5 Lt</div></div>
+          <div class="m-item__price">$8,000</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left"><div class="m-item__name">Dom Pérignon Vintage 750ml</div></div>
+          <div class="m-item__price">$13,500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     HOOKAHS
+     ══════════════════════════════════════ -->
+<section class="m-section" id="hookahs">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Shisha Experience</div>
+    <h2 class="m-section-title">Hookahs</h2>
+    <div class="m-line"></div>
+    <p class="m-section-sub">Disfruta de una experiencia sensorial con nuestras shishas fusionadas con esencias frutales, licores y tabaco premium importado.</p>
+
+    <div class="m-category">
+      <div class="m-item">
+        <div class="m-item__left">
+          <div class="m-item__name">Hookah Clásica</div>
+          <div class="m-item__desc">Shisha con agua y 1 carga de tabaco premium a elegir: Kiwi, Durazno, Fresa, Chocolate, Manzana, Lichi, Sandía, Mora azul con menta.</div>
+        </div>
+        <div class="m-item__price">$550</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item__left">
+          <div class="m-item__name">Watermelon Mojito</div>
+          <div class="m-item__desc">Shisha con infusión de hierbabuena y ron blanco, tabaco de sandía. Incluye 2 cargas de tabaco premium.</div>
+        </div>
+        <div class="m-item__price">$800</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item__left">
+          <div class="m-item__name">Strawberry Gin &amp; Tonic</div>
+          <div class="m-item__desc">Shisha con infusión de agua tónica, pepino y ginebra, tabaco de fresa. Incluye 2 cargas de tabaco premium.</div>
+        </div>
+        <div class="m-item__price">$800</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item__left">
+          <div class="m-item__name">Magic Clericot</div>
+          <div class="m-item__desc">Shisha con infusión de fresa, limón y vino tinto, tabaco de manzana. Incluye 2 cargas de tabaco premium.</div>
+        </div>
+        <div class="m-item__price">$800</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item__left">
+          <div class="m-item__name">Tropical Blue</div>
+          <div class="m-item__desc">Shisha con infusión de toronja con Hpnotiq, tabaco de lichi. Incluye 2 cargas de tabaco premium.</div>
+        </div>
+        <div class="m-item__price">$950</div>
+      </div>
+      <div class="m-item">
+        <div class="m-item__left">
+          <div class="m-item__name">Chandon Brut</div>
+          <div class="m-item__desc">Shisha con infusión de fresa con vino espumoso Chandon Brut, tabaco de manzana. Incluye 2 cargas de tabaco premium.</div>
+        </div>
+        <div class="m-item__price">$1,100</div>
+      </div>
+    </div>
+    <p class="m-hookah-note">★ Opcional: cambia el tabaco por sabores a base de hierbas — 0% Tabaco · 0% Nicotina.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ALIMENTOS
+     ══════════════════════════════════════ -->
+<section class="m-section" id="alimentos">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Kitchen</div>
+    <h2 class="m-section-title">Alimentos</h2>
+    <div class="m-line"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:40px;overflow:hidden;height:300px;">
+      <img src="uploads/Comida Aguachile Kavala.png" alt="Aguachile Kavala" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+      <img src="uploads/Comida Kavala.png" alt="Alimentos Kavala" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+    </div>
+
+    <div class="m-grid-2">
+      <!-- Entradas -->
+      <div class="m-category">
+        <h3 style="font-family:var(--ff-s);font-size:22px;color:var(--dark);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(44,20,9,.12);">Entradas</h3>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Guacamole</div>
+            <div class="m-item__desc">Guacamole cremoso con totopos artesanales al chipotle, crujientes y con un toque ahumado.</div>
+          </div>
+          <div class="m-item__price">$100</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Aguachile Negro</div>
+            <div class="m-item__desc">Camarón fresco en salsas negras de la casa, pepino, cacahuate tostado y notas cítricas intensas.</div>
+          </div>
+          <div class="m-item__price">$240</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Aguachile Coco</div>
+            <div class="m-item__desc">Fusión tropical de camarón y coco natural, con pepino crujiente y limón recién exprimido.</div>
+          </div>
+          <div class="m-item__price">$240</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Aguachile de Mango</div>
+            <div class="m-item__desc">Camarón marinado en limón, con mango, pepino, zanahoria y chile serrano. Dulce, picante y refrescante.</div>
+          </div>
+          <div class="m-item__price">$240</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Ceviche de Pescado</div>
+            <div class="m-item__desc">Torre de ceviche de tilapia, pepino, cebolla y limón.</div>
+          </div>
+          <div class="m-item__price">$220</div>
+        </div>
+      </div>
+
+      <!-- Tacos -->
+      <div class="m-category">
+        <h3 style="font-family:var(--ff-s);font-size:22px;color:var(--dark);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(44,20,9,.12);">Tacos</h3>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Baja Camarón</div>
+            <div class="m-item__desc">3 tacos de maíz, camarones capeados estilo baja.</div>
+          </div>
+          <div class="m-item__price">$210</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Baja Pescado</div>
+            <div class="m-item__desc">3 tacos de maíz, filete de pescado capeado estilo baja.</div>
+          </div>
+          <div class="m-item__price">$190</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Gobernador</div>
+            <div class="m-item__desc">3 tacos de machaca de camarón con queso gratinado.</div>
+          </div>
+          <div class="m-item__price">$175</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Tacos de Pulpo</div>
+            <div class="m-item__desc">3 tacos de pulpo al zarandeado, marinados en adobo de la casa, con piña asada y toque de guacamole.</div>
+          </div>
+          <div class="m-item__price">$260</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Al Pastor</div>
+            <div class="m-item__desc">Orden de 3 tacos medianos al pastor.</div>
+          </div>
+          <div class="m-item__price">$150</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-grid-2" style="margin-top:8px;">
+      <!-- Del grill -->
+      <div class="m-category">
+        <h3 style="font-family:var(--ff-s);font-size:22px;color:var(--dark);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(44,20,9,.12);">Del Grill</h3>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Hamburguesa Kavala</div>
+            <div class="m-item__desc">Sirloin de res a la plancha con tocino crujiente, queso fundido y guacamole artesanal en pan brioche.</div>
+          </div>
+          <div class="m-item__price">$220</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Supreme Chicken Tenders</div>
+            <div class="m-item__desc">Tiras de pollo sazonadas con especias, servidas con tu elección de salsa BBQ o Buffalo.</div>
+          </div>
+          <div class="m-item__price">$160</div>
+        </div>
+      </div>
+
+      <!-- Pizzas -->
+      <div class="m-category">
+        <h3 style="font-family:var(--ff-s);font-size:22px;color:var(--dark);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(44,20,9,.12);">Pizzas a las Brazas</h3>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Mediterránea</div>
+            <div class="m-item__desc">Jitomate, albahaca, mezcla de quesos.</div>
+          </div>
+          <div class="m-item__price">$200</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Al Trompo</div>
+            <div class="m-item__desc">Carne al pastor, piña, queso.</div>
+          </div>
+          <div class="m-item__price">$250</div>
+        </div>
+        <div class="m-item">
+          <div class="m-item__left">
+            <div class="m-item__name">Gobernador</div>
+            <div class="m-item__desc">Machaca de camarón, queso.</div>
+          </div>
+          <div class="m-item__price">$280</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     DESTILADOS
+     ══════════════════════════════════════ -->
+<section class="m-section" id="destilados">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Premium Spirits</div>
+    <h2 class="m-section-title">Destilados</h2>
+    <div class="m-line"></div>
+    <p class="m-section-sub">Las botellas de 750ml incluyen 5 refrescos de 355ml ó 2 litros de jugo. La botella de 1.75L incluye 10 refrescos. No aplica en champagne, Pama ni Hpnotiq.</p>
+
+    <!-- TEQUILAS -->
+    <div class="m-category">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+        <div class="m-category-title" style="border-bottom:none;padding-bottom:0;">Tequilas</div>
+        <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+          <span>COPA 2oz</span>
+          <span>BOTELLA</span>
+        </div>
+      </div>
+      <div class="m-grid-2">
+        <div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Hda. Coyotes Blanco <span class="house">casa</span></div></div>
+            <div class="m-dual-price"><span class="copa">$180</span><span class="botella">$2,000</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Altos Plata</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Gran Malo Tamarindo</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">1800 Blanco</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Don Julio Blanco</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Herradura Plata</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Dobel Blanco</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Centenario Ultra</div></div>
+            <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Herradura Reposado</div></div>
+            <div class="m-dual-price"><span class="copa">$210</span><span class="botella">$2,300</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Herradura Cristal</div></div>
+            <div class="m-dual-price"><span class="copa">$210</span><span class="botella">$2,300</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">7 Leguas Blanco</div></div>
+            <div class="m-dual-price"><span class="copa">$210</span><span class="botella">$2,300</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Don Ramón Platinum</div></div>
+            <div class="m-dual-price"><span class="copa">$210</span><span class="botella">$2,300</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Tradicional Cristalino</div></div>
+            <div class="m-dual-price"><span class="copa">$220</span><span class="botella">$2,400</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Patrón Silver</div></div>
+            <div class="m-dual-price"><span class="copa">$200</span><span class="botella">$2,100</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Dobel Tahona Blanco</div></div>
+            <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,600</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Patrón Cristalino</div></div>
+            <div class="m-dual-price"><span class="copa">$240</span><span class="botella">$2,600</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">1800 Cristalino</div></div>
+            <div class="m-dual-price"><span class="copa">$250</span><span class="botella">$2,800</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Dobel Diamante 750ml</div></div>
+            <div class="m-dual-price"><span class="copa">$250</span><span class="botella">$2,800</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Herradura Ultra</div></div>
+            <div class="m-dual-price"><span class="copa">$250</span><span class="botella">$2,800</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Volcán de mi Tierra</div></div>
+            <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,800</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Centenario Cristalino</div></div>
+            <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,900</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Don Julio 70</div></div>
+            <div class="m-dual-price"><span class="copa">$300</span><span class="botella">$3,300</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Dobel Diamante 1.75 Lt</div></div>
+            <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$5,300</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Don Julio 1942 Añejo</div></div>
+            <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$7,900</span></div>
+          </div>
+          <div class="m-item m-item--botella">
+            <div class="m-item__left"><div class="m-item__name">Clase Azul Reposado</div></div>
+            <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$9,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-grid-3">
+      <!-- WHISKY -->
+      <div class="m-category">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+          <div class="m-category-title" style="border-bottom:none;padding-bottom:0;font-size:22px;">Whisky</div>
+          <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+            <span>COPA</span><span>BOT.</span>
+          </div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">JW Black Label</div></div>
+          <div class="m-dual-price"><span class="copa">$280</span><span class="botella">$3,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Buchanan's 12</div></div>
+          <div class="m-dual-price"><span class="copa">$280</span><span class="botella">$3,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Chivas Regal 12</div></div>
+          <div class="m-dual-price"><span class="copa">$280</span><span class="botella">$3,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Jack Daniel's</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,300</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Jack Daniel's Honey</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,400</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Buchanan's 18</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$4,800</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Buchanan's Red Seal</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$10,500</span></div>
+        </div>
+      </div>
+
+      <!-- GIN -->
+      <div class="m-category">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+          <div class="m-category-title" style="border-bottom:none;padding-bottom:0;font-size:22px;">Gin</div>
+          <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+            <span>COPA</span><span>BOT.</span>
+          </div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Bombay</div></div>
+          <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Tanqueray</div></div>
+          <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Puerto de Indias</div></div>
+          <div class="m-dual-price"><span class="copa">$190</span><span class="botella">$2,100</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Tanqueray Ten</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,400</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Hendrick's</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$3,000</span></div>
+        </div>
+      </div>
+
+      <!-- VODKA -->
+      <div class="m-category">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+          <div class="m-category-title" style="border-bottom:none;padding-bottom:0;font-size:22px;">Vodka</div>
+          <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+            <span>COPA</span><span>BOT.</span>
+          </div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Smirnoff Tamarindo</div></div>
+          <div class="m-dual-price"><span class="copa">$160</span><span class="botella">$1,900</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Absolut</div></div>
+          <div class="m-dual-price"><span class="copa">$180</span><span class="botella">$2,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Absolut Sabores</div></div>
+          <div class="m-dual-price"><span class="copa">$180</span><span class="botella">$2,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Stolichnaya</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,300</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Grey Goose</div></div>
+          <div class="m-dual-price"><span class="copa">$250</span><span class="botella">$2,800</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Belvedere</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,800</span></div>
+        </div>
+      </div>
+
+      <!-- RON -->
+      <div class="m-category" style="margin-top:32px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+          <div class="m-category-title" style="border-bottom:none;padding-bottom:0;font-size:22px;">Ron</div>
+          <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+            <span>COPA</span><span>BOT.</span>
+          </div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Bacardí Blanco</div></div>
+          <div class="m-dual-price"><span class="copa">$180</span><span class="botella">$2,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Flor de Caña Añejo 4</div></div>
+          <div class="m-dual-price"><span class="copa">$200</span><span class="botella">$2,200</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Havana Club 7 años</div></div>
+          <div class="m-dual-price"><span class="copa">$230</span><span class="botella">$2,500</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Zacapa Centenario 23</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$3,500</span></div>
+        </div>
+      </div>
+
+      <!-- MEZCALES -->
+      <div class="m-category" style="margin-top:32px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+          <div class="m-category-title" style="border-bottom:none;padding-bottom:0;font-size:22px;">Mezcales</div>
+          <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+            <span>COPA</span><span>BOT.</span>
+          </div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">400 Conejos Espadín</div></div>
+          <div class="m-dual-price"><span class="copa">$200</span><span class="botella">$2,200</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Unión Uno Joven</div></div>
+          <div class="m-dual-price"><span class="copa">$200</span><span class="botella">$2,200</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Creyente Cristalino Reposado</div></div>
+          <div class="m-dual-price"><span class="copa">$220</span><span class="botella">$2,500</span></div>
+        </div>
+      </div>
+
+      <!-- OTROS ESPIRITUOSOS -->
+      <div class="m-category" style="margin-top:32px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--terra);padding-bottom:10px;margin-bottom:0;">
+          <div class="m-category-title" style="border-bottom:none;padding-bottom:0;font-size:22px;">Otros</div>
+          <div class="m-prices-header" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+            <span>COPA</span><span>BOT.</span>
+          </div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Torres 10</div></div>
+          <div class="m-dual-price"><span class="copa">$200</span><span class="botella">$2,200</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Jägermeister</div></div>
+          <div class="m-dual-price"><span class="copa">$200</span><span class="botella">$2,200</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Pama</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,100</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Hpnotiq</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$2,100</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Martell VSOP</div></div>
+          <div class="m-dual-price"><span class="copa">$280</span><span class="botella">$3,000</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Remy Martin VSOP</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$3,200</span></div>
+        </div>
+        <div class="m-item m-item--botella">
+          <div class="m-item__left"><div class="m-item__name">Hennessy VSOP</div></div>
+          <div class="m-dual-price"><span class="copa" style="color:rgba(92,51,23,.3);">—</span><span class="botella">$3,500</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     EXTRAS
+     ══════════════════════════════════════ -->
+<section class="m-section" id="extras">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Complementos</div>
+    <h2 class="m-section-title">Extras</h2>
+    <div class="m-line"></div>
+    <div class="m-extras-grid">
+      <div class="m-extra-card">
+        <span class="m-extra-name">Agua Natural 1L</span>
+        <span class="m-extra-price">$60</span>
+      </div>
+      <div class="m-extra-card">
+        <span class="m-extra-name">Refresco 355ml</span>
+        <span class="m-extra-price">$60</span>
+      </div>
+      <div class="m-extra-card">
+        <span class="m-extra-name">Agua Perrier</span>
+        <span class="m-extra-price">$75</span>
+      </div>
+      <div class="m-extra-card">
+        <span class="m-extra-name">Boost</span>
+        <span class="m-extra-price">$75</span>
+      </div>
+      <div class="m-extra-card">
+        <span class="m-extra-name">Cerveza</span>
+        <span class="m-extra-price">$75</span>
+      </div>
+      <div class="m-extra-card">
+        <span class="m-extra-name">Red Bull</span>
+        <span class="m-extra-price">$100</span>
+      </div>
+      <div class="m-extra-card">
+        <span class="m-extra-name">Cigarros</span>
+        <span class="m-extra-price">$250</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PAQUETES
+     ══════════════════════════════════════ -->
+<section class="m-section" id="paquetes">
+  <div class="m-wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="m-label">Group Experience</div>
+    <h2 class="m-section-title">Paquetes Grupales</h2>
+    <div class="m-line"></div>
+    <p class="m-section-sub">Planes diseñados para grupos de 20 personas. Mesa reservada, botellas y kit de celebración incluido. Mínimo 20 participantes.</p>
+
+    <div class="m-pkg-grid">
+      <!-- SILVER -->
+      <div class="m-pkg">
+        <div class="m-pkg__head m-pkg__head--silver" style="background-color: rgb(89, 89, 89)">
+          <div class="m-pkg__badge">Level 01</div>
+          <div class="m-pkg__name" style="color:#C0C0C0;">Silver</div>
+          <div class="m-pkg__tag" style="color:rgba(192,192,192,.5);">Fun &amp; Essential.</div>
+          <div class="m-pkg__price" style="color:#C0C0C0;"><sup>$</sup>12,000</div>
+          <div class="m-pkg__unit" style="color: rgb(255, 253, 253)">MXN total · desde $600 p/p</div>
+          <div class="m-pkg__loc">Mesa en Main Area</div>
+        </div>
+        <div class="m-pkg__body">
+          <ul class="m-pkg__list">
+            <li>5 Botellas Estándar de 700 ml</li>
+            <li>25 Mezcladores incluidos</li>
+            <li>15 Perlas negras</li>
+            <li>Kit de celebración sin costo</li>
+            <li>Servicio dedicado</li>
+          </ul>
+          <p class="m-pkg__note">Propina no incluida</p>
+        </div>
+      </div>
+      <!-- GOLD -->
+      <div class="m-pkg m-pkg--gold" style="position:relative;">
+        <div style="position:absolute;top:0;right:0;background:var(--terra);color:white;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;">Más popular</div>
+        <div class="m-pkg__head m-pkg__head--gold">
+          <div class="m-pkg__badge">Level 02</div>
+          <div class="m-pkg__name" style="color:#fff;">Gold</div>
+          <div class="m-pkg__tag" style="color:rgba(255,255,255,.65);">Premium Bottles.</div>
+          <div class="m-pkg__price" style="color:#fff;"><sup>$</sup>17,000</div>
+          <div class="m-pkg__unit">MXN total · desde $850 p/p</div>
+          <div class="m-pkg__loc">Mesa en Pool Area</div>
+        </div>
+        <div class="m-pkg__body">
+          <ul class="m-pkg__list">
+            <li>5 Botellas Premium de 700 ml</li>
+            <li>1 Botella Chandon Brut</li>
+            <li>25 Mezcladores incluidos</li>
+            <li>15 Perlas negras</li>
+            <li>Kit de celebración sin costo</li>
+            <li>Servicio VIP dedicado</li>
+          </ul>
+          <p class="m-pkg__note">Propina no incluida</p>
+        </div>
+      </div>
+      <!-- BLACK -->
+      <div class="m-pkg">
+        <div class="m-pkg__head m-pkg__head--black">
+          <div class="m-pkg__badge">Level 03</div>
+          <div class="m-pkg__name" style="color:#D0A870;">Black</div>
+          <div class="m-pkg__tag" style="color:rgba(208,168,112,.5);">Full VIP Level.</div>
+          <div class="m-pkg__price" style="color:#D0A870;"><sup>$</sup>20,000</div>
+          <div class="m-pkg__unit" style="color: rgb(255, 249, 245)">MXN total · desde $1,000 p/p</div>
+          <div class="m-pkg__loc" style="color:#D0A870;border-color:rgba(208,168,112,.2);background:rgba(208,168,112,.08);">Mesa Deluxe Lounge</div>
+        </div>
+        <div class="m-pkg__body" style="background:#F5F0E8;">
+          <ul class="m-pkg__list">
+            <li>3 Dobel Diamante 1.75 L</li>
+            <li>1 Botella Hpnotiq 750 ml</li>
+            <li>30 Mezcladores incluidos</li>
+            <li>15 Perlas negras</li>
+            <li>Kit de celebración personalizado</li>
+            <li>Servicio exclusivo dedicado</li>
+          </ul>
+          <p class="m-pkg__note">Propina no incluida</p>
+        </div>
+      </div>
+      <!-- LA CASITA -->
+      <div class="m-pkg">
+        <div class="m-pkg__head m-pkg__head--casita">
+          <div class="m-pkg__badge">Add-On</div>
+          <div class="m-pkg__name" style="color:#fff;font-size:30px;">La Casita</div>
+          <div class="m-pkg__tag" style="color:rgba(255,255,255,.45);">Las favoritas de Bad Bunny</div>
+          <div class="m-pkg__price" style="color:var(--gold);"><sup>$</sup>1,600</div>
+          <div class="m-pkg__unit">MXN · 12 Perlas Negras</div>
+        </div>
+        <div class="m-pkg__body">
+          <ul class="m-pkg__list">
+            <li>12 Perlas Negras</li>
+            <li>Ideal para celebrar en grupo</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;background:rgba(44,20,9,.04);border:1px solid rgba(44,20,9,.08);padding:20px 24px;">
+      <p style="font-size:13px;color:var(--mid);line-height:1.8;"><strong style="color:var(--terra);">Botellas Estándar (Silver):</strong> Dobel Blanco, 1800 Blanco, Patrón Silver, Absolut, Bacardí, Bombay, Torres 10, Jägermeister.<br><strong style="color:var(--terra);">Botellas Premium (Gold):</strong> Dobel Diamante, 1800 Cristalino, Patrón Cristalino, JW Black Label, Grey Goose, Hendrick's, Martell VSOP.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="m-footer">
+  <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.9;max-width:680px;margin:0 auto 20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08);">
+    Las botellas de 700ml o 750ml incluyen 5 refrescos de 355ml ó 2 litros de jugo. No aplica en botellas de champagne, Pama ó Hpnotiq. La botella de 1.75L incluye 10 refrescos. Los precios incluyen el 16% de IVA. No incluyen propina.
+  </p>
+  <p>Los precios incluyen IVA · <a href="index.html">Kavala Day Club</a> · Hacienda Coyotes, Zapotlanejo, Jalisco</p>
+  <p style="margin-top:6px;">¿Dudas? <a href="https://wa.me/523316990962" target="_blank" rel="noopener">WhatsApp: 331 699 0962</a></p>
+</div>
+
+<script>
+document.getElementById('menuTabs').addEventListener('click', function(e) {
+  var btn = e.target.closest('[data-tab]');
+  if (!btn) return;
+  document.querySelectorAll('.m-hero__tab').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.m-section').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById(btn.dataset.tab).classList.add('active');
+  var navH = document.querySelector('.m-nav').offsetHeight;
+  var activeEl = document.querySelector('.m-section.active');
+  var top = activeEl.getBoundingClientRect().top + window.pageYOffset - navH;
+  window.scrollTo({top: top, behavior: 'smooth'});
+});
+</script>
+</body>
+</html>

@@ -1125,9 +1125,17 @@ document.getElementById('kvExpModal').addEventListener('click', function(e) {
 function openReserva() {
   const modal = document.getElementById('kvReservaModal');
   const frame = document.getElementById('kvRiserviFrame');
-  if (!frame.src) frame.src = RISERVI_URL;
+  frame.src = RISERVI_URL;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Fallback: si el iframe no carga en 4s, abrir en nueva pestaña
+  clearTimeout(window._riserviTimer);
+  window._riserviTimer = setTimeout(function() {
+    if (!frame.contentDocument || frame.contentDocument.URL === 'about:blank') {
+      window.open(RISERVI_URL, '_blank');
+      closeReserva();
+    }
+  }, 4000);
 }
 function closeReserva() {
   document.getElementById('kvReservaModal').classList.remove('open');

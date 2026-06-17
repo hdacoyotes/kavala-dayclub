@@ -228,10 +228,14 @@
 @media(max-width:768px){.kv-hero__content{padding:0 20px 88px;}}
 
 /* Schedule bar */
-.kv-schedbar{background:var(--terra);padding:15px 40px;display:flex;justify-content:center;gap:0;flex-wrap:wrap;overflow-x:auto;}
+.kv-schedbar{background:#C96A4A;padding:15px 40px;display:flex;justify-content:center;gap:0;flex-wrap:wrap;}
 .kv-schedbar__item{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.8);padding:4px 22px;white-space:nowrap;border-right:1px solid rgba(255,255,255,.18);}
 .kv-schedbar__item:last-child{border-right:none;}
-.kv-schedbar__item strong{color:var(--white);}
+.kv-schedbar__item strong{color:#fff;}
+@media(max-width:768px){
+  .kv-schedbar{padding:10px 12px;justify-content:center;background:#C96A4A !important;}
+  .kv-schedbar__item{padding:4px 10px;font-size:9px;white-space:normal;}
+}
 
 /* FAQ */
 .kv-faq-item{border-bottom:1px solid rgba(44,20,9,.1);}

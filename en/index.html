@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../kavala-v2.css">
+<link rel="preload" as="image" href="../uploads/venue-05.jpg" fetchpriority="high">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TNWW7LJD');</script>
 <!-- Meta Pixel -->
@@ -315,6 +316,10 @@
 .kv-lang-toggle .sep{color:rgba(255,255,255,.2);padding:0;}
 /* Lightbox */
 .kv-lb{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;cursor:zoom-out;}
+
+/* Lazy-loaded background images */
+.kv-dj-strip-item{background-size:cover;background-position:center;filter:brightness(.7);}
+.kv-stay-bg{background-size:cover;background-position:center 40%;}
 .kv-lb.open{display:flex;}
 </style>
 </head>
@@ -415,7 +420,7 @@
   <div class="kv-wrap">
     <div class="kv-features">
       <article class="kv-feature kv-fade">
-        <div class="kv-feature__img" style="background-image:url('../uploads/venue-01.jpg');"></div>
+        <div class="kv-feature__img" data-bg="../uploads/venue-01.jpg"></div>
         <div class="kv-feature__body">
           <div class="kv-feature__eyebrow">The Pool</div>
           <h3 class="kv-feature__title">Social Pool</h3>
@@ -423,7 +428,7 @@
         </div>
       </article>
       <article class="kv-feature kv-fade kv-fade--d1">
-        <div class="kv-feature__img" style="background-image:url('../uploads/dj-04.jpg');"></div>
+        <div class="kv-feature__img" data-bg="../uploads/dj-04.jpg"></div>
         <div class="kv-feature__body">
           <div class="kv-feature__eyebrow">Live Music</div>
           <h3 class="kv-feature__title">Live DJ</h3>
@@ -431,7 +436,7 @@
         </div>
       </article>
       <article class="kv-feature kv-fade kv-fade--d2">
-        <div class="kv-feature__img" style="background-image:url('../uploads/PAreja Kavala.jpg');"></div>
+        <div class="kv-feature__img" data-bg="../uploads/PAreja Kavala.jpg"></div>
         <div class="kv-feature__body">
           <div class="kv-feature__eyebrow">Craft Drinks</div>
           <h3 class="kv-feature__title">Craft Cocktails</h3>
@@ -439,7 +444,7 @@
         </div>
       </article>
       <article class="kv-feature kv-fade">
-        <div class="kv-feature__img" style="background-image:url('../uploads/venue-02.jpg');"></div>
+        <div class="kv-feature__img" data-bg="../uploads/venue-02.jpg"></div>
         <div class="kv-feature__body">
           <div class="kv-feature__eyebrow">VIP Tables</div>
           <h3 class="kv-feature__title">Tables & Bottles</h3>
@@ -447,7 +452,7 @@
         </div>
       </article>
       <article class="kv-feature kv-fade kv-fade--d1">
-        <div class="kv-feature__img" style="background-image:url('../uploads/people-15.jpg');"></div>
+        <div class="kv-feature__img" data-bg="../uploads/people-15.jpg"></div>
         <div class="kv-feature__body">
           <div class="kv-feature__eyebrow">The Vibe</div>
           <h3 class="kv-feature__title">Unique Atmosphere</h3>
@@ -455,7 +460,7 @@
         </div>
       </article>
       <article class="kv-feature kv-fade kv-fade--d2">
-        <div class="kv-feature__img" style="background-image:url('../uploads/venue-07.jpg');"></div>
+        <div class="kv-feature__img" data-bg="../uploads/venue-07.jpg"></div>
         <div class="kv-feature__body">
           <div class="kv-feature__eyebrow">Transport</div>
           <h3 class="kv-feature__title">Shuttle from GDL</h3>
@@ -468,11 +473,11 @@
 
 <!-- POOL STRIP -->
 <div class="kv-poolstrip">
-  <div style="background-image:url('../uploads/venue-05.jpg');"></div>
-  <div style="background-image:url('../uploads/people-11.jpg');"></div>
-  <div style="background-image:url('../uploads/dj-04.jpg');"></div>
-  <div style="background-image:url('../uploads/people-08.jpg');"></div>
-  <div style="background-image:url('../uploads/venue-01.jpg');"></div>
+  <div data-bg="../uploads/venue-05.jpg"></div>
+  <div data-bg="../uploads/people-11.jpg"></div>
+  <div data-bg="../uploads/dj-04.jpg"></div>
+  <div data-bg="../uploads/people-08.jpg"></div>
+  <div data-bg="../uploads/venue-01.jpg"></div>
 </div>
 
 <!-- CELEBRATE HERE -->
@@ -489,7 +494,7 @@
   </div>
   <div class="kv-celebrate-grid">
     <div class="kv-celebrate kv-fade">
-      <div class="kv-celebrate__bg" style="background-image:url('../uploads/people-08.jpg');"></div>
+      <div class="kv-celebrate__bg" data-bg="../uploads/people-08.jpg"></div>
       <div class="kv-celebrate__overlay"></div>
       <div class="kv-celebrate__body">
         <span class="kv-label kv-label--gold" style="display:block;margin-bottom:12px;">Birthday</span>
@@ -499,7 +504,7 @@
       </div>
     </div>
     <div class="kv-celebrate kv-fade kv-fade--d1">
-      <div class="kv-celebrate__bg" style="background-image:url('../uploads/Despedida soltera 1.JPG');"></div>
+      <div class="kv-celebrate__bg" data-bg="../uploads/Despedida soltera 1.JPG"></div>
       <div class="kv-celebrate__overlay"></div>
       <div class="kv-celebrate__body">
         <span class="kv-label kv-label--gold" style="display:block;margin-bottom:12px;">Bachelorette</span>
@@ -509,7 +514,7 @@
       </div>
     </div>
     <div class="kv-celebrate kv-fade kv-fade--d2">
-      <div class="kv-celebrate__bg" style="background-image:url('../uploads/Grupos Kavala 1.JPG');"></div>
+      <div class="kv-celebrate__bg" data-bg="../uploads/Grupos Kavala 1.JPG"></div>
       <div class="kv-celebrate__overlay"></div>
       <div class="kv-celebrate__body">
         <span class="kv-label kv-label--gold" style="display:block;margin-bottom:12px;">Groups</span>
@@ -530,10 +535,10 @@
 
 <!-- DJ STRIP -->
 <div style="display:grid;grid-template-columns:repeat(4,1fr);height:210px;overflow:hidden;">
-  <div style="background:url('../uploads/dj-01.jpg') center/cover;filter:brightness(.7);"></div>
-  <div style="background:url('../uploads/dj-02.jpg') center/cover;filter:brightness(.7);"></div>
-  <div style="background:url('../uploads/dj-05.jpg') center/cover;filter:brightness(.7);"></div>
-  <div style="background:url('../uploads/dj-08.jpg') center/cover;filter:brightness(.7);"></div>
+  <div class="kv-dj-strip-item" data-bg="../uploads/dj-01.jpg"></div>
+  <div class="kv-dj-strip-item" data-bg="../uploads/dj-02.jpg"></div>
+  <div class="kv-dj-strip-item" data-bg="../uploads/dj-05.jpg"></div>
+  <div class="kv-dj-strip-item" data-bg="../uploads/dj-08.jpg"></div>
 </div>
 
 <!-- THIS WEEKEND -->
@@ -601,16 +606,16 @@
     <p class="kv-body kv-body--light kv-fade" style="max-width:400px;margin:10px auto 0;">A different experience every weekend. This is how Kavala lives.</p>
   </div>
   <div class="kv-gallery kv-wrap">
-    <div class="kv-gal kv-gal--2x2" style="background-image:url('../uploads/venue-05.jpg');" tabindex="0" role="button" data-src="../uploads/venue-05.jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/Pool Kavala .jpg');" tabindex="0" role="button" data-src="../uploads/Pool Kavala .jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/Grupos Kavala 2.JPG');" tabindex="0" role="button" data-src="../uploads/Grupos Kavala 2.JPG"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/dj-08.jpg');" tabindex="0" role="button" data-src="../uploads/dj-08.jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/venue-04.jpg');" tabindex="0" role="button" data-src="../uploads/venue-04.jpg"></div>
-    <div class="kv-gal kv-gal--2x2" style="background-image:url('../uploads/people-15.jpg');" tabindex="0" role="button" data-src="../uploads/people-15.jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/venue-02.jpg');" tabindex="0" role="button" data-src="../uploads/venue-02.jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/people-03.jpg');" tabindex="0" role="button" data-src="../uploads/people-03.jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/dj-03.jpg');" tabindex="0" role="button" data-src="../uploads/dj-03.jpg"></div>
-    <div class="kv-gal" style="background-image:url('../uploads/people-07.jpg');" tabindex="0" role="button" data-src="../uploads/people-07.jpg"></div>
+    <div class="kv-gal kv-gal--2x2" data-bg="../uploads/venue-05.jpg" tabindex="0" role="button" data-src="../uploads/venue-05.jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/Pool Kavala .jpg" tabindex="0" role="button" data-src="../uploads/Pool Kavala .jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/Grupos Kavala 2.JPG" tabindex="0" role="button" data-src="../uploads/Grupos Kavala 2.JPG"></div>
+    <div class="kv-gal" data-bg="../uploads/dj-08.jpg" tabindex="0" role="button" data-src="../uploads/dj-08.jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/venue-04.jpg" tabindex="0" role="button" data-src="../uploads/venue-04.jpg"></div>
+    <div class="kv-gal kv-gal--2x2" data-bg="../uploads/people-15.jpg" tabindex="0" role="button" data-src="../uploads/people-15.jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/venue-02.jpg" tabindex="0" role="button" data-src="../uploads/venue-02.jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/people-03.jpg" tabindex="0" role="button" data-src="../uploads/people-03.jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/dj-03.jpg" tabindex="0" role="button" data-src="../uploads/dj-03.jpg"></div>
+    <div class="kv-gal" data-bg="../uploads/people-07.jpg" tabindex="0" role="button" data-src="../uploads/people-07.jpg"></div>
   </div>
   <div class="kv-wrap kv-tc" style="margin-top:36px;">
     <a class="kv-btn kv-btn--ghost" href="https://www.instagram.com/kavaladayclub" target="_blank" rel="noopener">Follow Us on Instagram →</a>
@@ -882,7 +887,7 @@
 
 <!-- STAY THE WEEKEND -->
 <section style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center;">
-  <div style="position:absolute;inset:0;background:url('../uploads/hotel-taanah.jpg') center 40%/cover;"></div>
+  <div class="kv-stay-bg" data-bg="../uploads/hotel-taanah.jpg" style="position:absolute;inset:0;"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(20,40,20,.9) 0%,rgba(20,40,20,.5) 60%,transparent 100%);"></div>
   <div style="position:relative;z-index:2;max-width:580px;padding:60px;" class="kv-fade">
     <span class="kv-label" style="color:rgba(200,230,200,.7);display:block;margin-bottom:14px;">Also at Hacienda Coyotes</span>
@@ -1114,6 +1119,17 @@ function renderDJs(events) {
   // Re-observe fades
   grid.querySelectorAll('.kv-fade').forEach(el => obs.observe(el));
 }
+
+// Lazy-load below-the-fold background images (reduces bandwidth contention on slow connections)
+const lazyBgObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.backgroundImage = `url('${entry.target.dataset.bg}')`;
+      lazyBgObserver.unobserve(entry.target);
+    }
+  });
+}, { rootMargin: '600px 0px' });
+document.querySelectorAll('[data-bg]').forEach(el => lazyBgObserver.observe(el));
 
 loadDJLineup();
 

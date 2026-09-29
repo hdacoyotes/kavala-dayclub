@@ -321,11 +321,38 @@
 .kv-dj-strip-item{background-size:cover;background-position:center;filter:brightness(.7);}
 .kv-stay-bg{background-size:cover;background-position:center 40%;}
 .kv-lb.open{display:flex;}
+
+/* NYE 2027 promo */
+.kv-nye-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:36px;}
+@media(max-width:768px){.kv-nye-grid{grid-template-columns:repeat(2,1fr);}}
+.kv-nye-pill{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:28px 20px;text-align:center;position:relative;}
+.kv-nye-pill--featured{background:var(--terra);border-color:var(--terra);}
+.kv-nye-pill__label{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;line-height:1.4;}
+.kv-nye-pill--featured .kv-nye-pill__label{color:rgba(255,255,255,.85);}
+.kv-nye-pill__price{font-family:var(--ff-s);font-size:32px;color:var(--white);}
+.kv-nye-pill__price sup{font-size:16px;vertical-align:super;}
+.kv-nye-pill__note{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px;}
+.kv-nye-pill--featured .kv-nye-pill__note{color:rgba(255,255,255,.75);}
+.kv-nye-badge{position:absolute;top:0;right:12px;transform:translateY(-50%);background:var(--gold);color:var(--dark);font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;}
+
+/* ── Promo bar NYE2027 ── */
+.kv-promo-bar{position:fixed;top:0;left:0;right:0;z-index:1000;height:36px;background:var(--gold);display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;font-family:var(--ff-n);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--dark);}
+.kv-promo-bar[hidden]{display:none;}
+.kv-promo-bar a{color:var(--dark);font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+.kv-promo-bar .pb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:6px 8px;color:var(--dark);opacity:.5;font-size:13px;line-height:1;}
+@media(max-width:640px){.kv-promo-bar{font-size:8px;gap:6px;padding:0 36px;}}
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNWW7LJD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- PROMO BAR NYE2027 -->
+<div class="kv-promo-bar" id="promo-bar" hidden>
+  <span>&#10022;&nbsp; A&ntilde;o Nuevo 2027 &middot; Taanah &amp; Kavala</span>
+  <a href="https://taanahglamping.com/NYE2027" target="_blank" rel="noopener">Ver paquetes &rarr;</a>
+  <button class="pb-close" type="button" aria-label="Cerrar anuncio">&times;</button>
+</div>
 
 <!-- TOP BAR -->
 <div style="background:#1a0a04;padding:7px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;border-bottom:1px solid rgba(255,255,255,.07);">
@@ -404,6 +431,55 @@
   <div class="kv-stat kv-fade kv-fade--d2"><div class="kv-stat__num">+18</div><div class="kv-stat__label">años · acceso exclusivo</div></div>
   <div class="kv-stat kv-fade kv-fade--d3"><div class="kv-stat__num">∞</div><div class="kv-stat__label">good vibes garantizados</div></div>
 </div>
+
+<!-- NYE 2027 -->
+<section class="kv-section kv-bg-dark kv-bamboo-bg" id="nye2027">
+  <div class="kv-wrap kv-tc" style="margin-bottom:44px;">
+    <div class="kv-label-wrap" style="justify-content:center;margin-bottom:6px;">
+      <span class="kv-label-diamond" style="background:var(--gold);"></span>
+      <span class="kv-label kv-label--gold">31 de Diciembre · Año Nuevo</span>
+      <span class="kv-label-diamond" style="background:var(--gold);"></span>
+    </div>
+    <div class="kv-line kv-line--c" style="background:var(--gold);"></div>
+    <h2 class="kv-h2 kv-h2--light kv-fade">Kavala NYE 2027.</h2>
+    <p class="kv-body kv-body--light kv-fade" style="max-width:560px;margin:14px auto 0;">DJs de 9:00 PM a 3:00 AM, countdown, uvas y copa de espumoso al llegar a 2027. Cena buffet, fiesta y hospedaje disponibles en un solo paquete.</p>
+  </div>
+  <div class="kv-wrap">
+    <div class="kv-nye-grid">
+      <div class="kv-nye-pill kv-fade">
+        <div class="kv-nye-pill__label">Kavala NYE<br>Party</div>
+        <div class="kv-nye-pill__price"><sup>$</sup>300</div>
+        <div class="kv-nye-pill__note">por persona</div>
+      </div>
+      <div class="kv-nye-pill kv-fade kv-fade--d1">
+        <div class="kv-nye-pill__label">Kavala NYE<br>Dinner + Party</div>
+        <div class="kv-nye-pill__price"><sup>$</sup>600</div>
+        <div class="kv-nye-pill__note">por persona</div>
+      </div>
+      <div class="kv-nye-pill kv-nye-pill--featured kv-fade kv-fade--d2">
+        <span class="kv-nye-badge">Más popular</span>
+        <div class="kv-nye-pill__label">Kavala NYE<br>Stay Experience</div>
+        <div class="kv-nye-pill__price"><sup>$</sup>4,700</div>
+        <div class="kv-nye-pill__note">por pareja · 1 noche + botella</div>
+      </div>
+      <div class="kv-nye-pill kv-fade kv-fade--d3">
+        <div class="kv-nye-pill__label">Taanah NYE<br>Escape</div>
+        <div class="kv-nye-pill__price"><sup>$</sup>5,800</div>
+        <div class="kv-nye-pill__note">desde · 2 personas · 2 noches</div>
+      </div>
+    </div>
+    <div class="kv-tc kv-fade">
+      <div class="kv-btn-group kv-btn-group--c">
+        <a class="kv-btn kv-btn--terra" href="https://taanahglamping.com/NYE2027" target="_blank" rel="noopener">Ver el evento completo y reservar →</a>
+        <a class="kv-btn kv-btn--wa" href="https://wa.me/523316990962?text=Hola,+quiero+informaci%C3%B3n+de+A%C3%B1o+Nuevo+2027+en+Kavala" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Preguntar por WhatsApp
+        </a>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,.3);margin-top:20px;">Precios sujetos a disponibilidad · Evento +18 · Ver detalles, fechas de hospedaje y condiciones completas en el evento</p>
+    </div>
+  </div>
+</section>
 
 <!-- THE KAVALA EXPERIENCE -->
 <section class="kv-section kv-bg-cream" id="experiencia">
@@ -1176,7 +1252,7 @@ window.addEventListener('scroll', () => {
     nav.style.top = '0';
   } else {
     nav.classList.remove('kv-nav--scrolled');
-    nav.style.top = '33px';
+    nav.style.top=(document.body.classList.contains('promo-active')?69:33)+'px';
   }
 });
 
@@ -1216,6 +1292,27 @@ burger && burger.addEventListener('click', () => {
   mOpen = !mOpen;
   Object.assign(navLinks.style, mOpen ? {display:'flex',flexDirection:'column',position:'fixed',top:'68px',left:'0',right:'0',background:'var(--dark)',padding:'20px',zIndex:'899'} : {display:'none'});
 });
+
+/* ---- Promo bar NYE2027 ---- */
+(function(){
+  var PKEY='taanah_promo_nye2027';
+  var EXPIRY=new Date('2027-01-01T06:00:00-06:00').getTime();
+  var bar=document.getElementById('promo-bar');
+  if(!bar)return;
+  if(Date.now()>EXPIRY)return;
+  try{if(localStorage.getItem(PKEY)==='1')return;}catch(e){}
+  bar.removeAttribute('hidden');
+  document.body.classList.add('promo-active');
+  var nav=document.querySelector('[id$="Nav"]')||document.querySelector('.kv-nav,.g-nav,.m-nav');
+  if(nav&&window.scrollY<=60)nav.style.top='69px';
+  var btn=bar.querySelector('.pb-close');
+  if(btn)btn.addEventListener('click',function(){
+    bar.setAttribute('hidden','');
+    document.body.classList.remove('promo-active');
+    if(nav&&window.scrollY<=60)nav.style.top='33px';
+    try{localStorage.setItem(PKEY,'1');}catch(e){}
+  });
+})();
 </script>
 </body>
 </html>

@@ -208,12 +208,26 @@ img{display:block;max-width:100%;}
 .kv-lang-toggle a:hover{color:#fff;}
 .kv-lang-toggle span{color:#fff;background:var(--terra);padding:4px 8px;}
 .kv-lang-toggle .sep{color:rgba(255,255,255,.2);padding:0;}
+
+/* ── Promo bar NYE2027 ── */
+.kv-promo-bar{position:fixed;top:0;left:0;right:0;z-index:1000;height:36px;background:var(--gold);display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;font-family:var(--ff-n);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--dark);}
+.kv-promo-bar[hidden]{display:none;}
+.kv-promo-bar a{color:var(--dark);font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+.kv-promo-bar .pb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:6px 8px;color:var(--dark);opacity:.5;font-size:13px;line-height:1;}
+@media(max-width:640px){.kv-promo-bar{font-size:8px;gap:6px;padding:0 36px;}}
 </style>
 </head>
 <body>
 <!-- GTM noscript --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNWW7LJD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- TOPBAR -->
+<!-- PROMO BAR NYE2027 -->
+<div class="kv-promo-bar" id="promo-bar" hidden>
+  <span>&#10022;&nbsp; A&ntilde;o Nuevo 2027 &middot; Taanah &amp; Kavala</span>
+  <a href="https://taanahglamping.com/NYE2027" target="_blank" rel="noopener">Ver paquetes &rarr;</a>
+  <button class="pb-close" type="button" aria-label="Cerrar anuncio">&times;</button>
+</div>
+
+<!-- TOP BAR -->
 <div class="g-topbar">
   <a href="https://www.hdacoyotes.com"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hacienda Coyotes</a>
   <nav>
@@ -707,7 +721,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeShuttle
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('gNav');
   if (window.scrollY > 60) { nav.classList.add('g-nav--scrolled'); nav.style.top='0'; }
-  else { nav.classList.remove('g-nav--scrolled'); nav.style.top='33px'; }
+  else { nav.classList.remove('g-nav--scrolled'); nav.style.top=(document.body.classList.contains('promo-active')?69:33)+'px'; }
 });
 
 // Fade on scroll
@@ -723,6 +737,27 @@ if (location.hash === '#despedida') {
     if (el) el.scrollIntoView({behavior:'smooth', block:'center'});
   }, 400);
 }
+
+/* ---- Promo bar NYE2027 ---- */
+(function(){
+  var PKEY='taanah_promo_nye2027';
+  var EXPIRY=new Date('2027-01-01T06:00:00-06:00').getTime();
+  var bar=document.getElementById('promo-bar');
+  if(!bar)return;
+  if(Date.now()>EXPIRY)return;
+  try{if(localStorage.getItem(PKEY)==='1')return;}catch(e){}
+  bar.removeAttribute('hidden');
+  document.body.classList.add('promo-active');
+  var nav=document.querySelector('[id$="Nav"]')||document.querySelector('.kv-nav,.g-nav,.m-nav');
+  if(nav&&window.scrollY<=60)nav.style.top='69px';
+  var btn=bar.querySelector('.pb-close');
+  if(btn)btn.addEventListener('click',function(){
+    bar.setAttribute('hidden','');
+    document.body.classList.remove('promo-active');
+    if(nav&&window.scrollY<=60)nav.style.top='33px';
+    try{localStorage.setItem(PKEY,'1');}catch(e){}
+  });
+})();
 </script>
 </body>
 </html>
